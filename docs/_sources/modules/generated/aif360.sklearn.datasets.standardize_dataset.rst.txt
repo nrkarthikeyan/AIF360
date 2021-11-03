@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.datasets`.standardize_dataset
+===============================================================
+
+.. currentmodule:: aif360.sklearn.datasets
+
+.. autofunction:: standardize_dataset

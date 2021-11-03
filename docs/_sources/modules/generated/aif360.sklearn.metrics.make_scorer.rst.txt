@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.make_scorer
+======================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: make_scorer

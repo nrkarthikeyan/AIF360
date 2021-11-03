@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.preprocessing`.DisparateImpactRemover
+====================================================================
+
+.. currentmodule:: aif360.algorithms.preprocessing
+
+.. autoclass:: DisparateImpactRemover
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~DisparateImpactRemover.fit
+      
+      
+        ~DisparateImpactRemover.fit_predict
+      
+      
+        ~DisparateImpactRemover.fit_transform
+      
+      
+        ~DisparateImpactRemover.predict
+      
+      
+        ~DisparateImpactRemover.transform
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,39 @@
+﻿:mod:`aif360.sklearn.postprocessing`.CalibratedEqualizedOdds
+===================================================================
+
+.. currentmodule:: aif360.sklearn.postprocessing
+
+.. autoclass:: CalibratedEqualizedOdds
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~CalibratedEqualizedOdds.fit
+      
+      
+        ~CalibratedEqualizedOdds.get_params
+      
+      
+        ~CalibratedEqualizedOdds.predict
+      
+      
+        ~CalibratedEqualizedOdds.predict_proba
+      
+      
+        ~CalibratedEqualizedOdds.score
+      
+      
+        ~CalibratedEqualizedOdds.set_params
+      
+   
+   
+
+   
+   
+   

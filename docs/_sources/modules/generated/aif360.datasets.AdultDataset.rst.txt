@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.AdultDataset
+==========================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: AdultDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~AdultDataset.align_datasets
+      
+      
+        ~AdultDataset.convert_to_dataframe
+      
+      
+        ~AdultDataset.copy
+      
+      
+        ~AdultDataset.export_dataset
+      
+      
+        ~AdultDataset.import_dataset
+      
+      
+        ~AdultDataset.split
+      
+      
+        ~AdultDataset.subset
+      
+      
+        ~AdultDataset.temporarily_ignore
+      
+      
+        ~AdultDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

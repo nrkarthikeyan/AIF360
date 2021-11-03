@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.preprocessing`.Reweighing
+========================================================
+
+.. currentmodule:: aif360.algorithms.preprocessing
+
+.. autoclass:: Reweighing
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~Reweighing.fit
+      
+      
+        ~Reweighing.fit_predict
+      
+      
+        ~Reweighing.fit_transform
+      
+      
+        ~Reweighing.predict
+      
+      
+        ~Reweighing.transform
+      
+   
+   
+
+   
+   
+   

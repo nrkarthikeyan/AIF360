@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.inprocessing`.PrejudiceRemover
+=============================================================
+
+.. currentmodule:: aif360.algorithms.inprocessing
+
+.. autoclass:: PrejudiceRemover
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~PrejudiceRemover.fit
+      
+      
+        ~PrejudiceRemover.fit_predict
+      
+      
+        ~PrejudiceRemover.fit_transform
+      
+      
+        ~PrejudiceRemover.predict
+      
+      
+        ~PrejudiceRemover.transform
+      
+   
+   
+
+   
+   
+   

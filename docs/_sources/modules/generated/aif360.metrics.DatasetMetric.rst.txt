@@ -1,0 +1,30 @@
+﻿:mod:`aif360.metrics`.DatasetMetric
+==========================================
+
+.. currentmodule:: aif360.metrics
+
+.. autoclass:: DatasetMetric
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~DatasetMetric.difference
+      
+      
+        ~DatasetMetric.num_instances
+      
+      
+        ~DatasetMetric.ratio
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.algorithms.inprocessing.AdversarialDebiasing &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="aif360.algorithms.inprocessing.ARTClassifier" href="aif360.algorithms.inprocessing.ARTClassifier.html" />
+    <link rel="prev" title="aif360.algorithms.preprocessing.Reweighing" href="aif360.algorithms.preprocessing.Reweighing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../algorithms.html">Algorithms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../algorithms.html#module-aif360.algorithms.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.preprocessing</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../algorithms.html#module-aif360.algorithms.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.AdversarialDebiasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.algorithms.inprocessing.ARTClassifier.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.ARTClassifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.algorithms.inprocessing.GerryFairClassifier.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.GerryFairClassifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.algorithms.inprocessing.MetaFairClassifier.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.MetaFairClassifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.algorithms.inprocessing.PrejudiceRemover.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.PrejudiceRemover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.algorithms.inprocessing.ExponentiatedGradientReduction.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.ExponentiatedGradientReduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.algorithms.inprocessing.GridSearchReduction.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.GridSearchReduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms.html#module-aif360.algorithms.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.postprocessing</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms.html#module-aif360.algorithms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../algorithms.html">Algorithms</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.AdversarialDebiasing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.algorithms.inprocessing.AdversarialDebiasing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-algorithms-inprocessing-adversarialdebiasing">
+<h1><a class="reference internal" href="../algorithms.html#module-aif360.algorithms.inprocessing" title="aif360.algorithms.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code></a>.AdversarialDebiasing<a class="headerlink" href="#aif360-algorithms-inprocessing-adversarialdebiasing" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="aif360.algorithms.inprocessing.AdversarialDebiasing">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">aif360.algorithms.inprocessing.</span></span><span class="sig-name descname"><span class="pre">AdversarialDebiasing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unprivileged_groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">privileged_groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adversary_loss_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_epochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classifier_num_hidden_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/algorithms/inprocessing/adversarial_debiasing.py#L13-L277"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.algorithms.inprocessing.AdversarialDebiasing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adversarial debiasing is an in-processing technique that learns a
+classifier to maximize prediction accuracy and simultaneously reduce an
+adversary’s ability to determine the protected attribute from the
+predictions <a class="footnote-reference brackets" href="#id2" id="id1">5</a>. This approach leads to a fair classifier as the
+predictions cannot carry any group discrimination information that the
+adversary can exploit.</p>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">5</a></span></dt>
+<dd><p>B. H. Zhang, B. Lemoine, and M. Mitchell, “Mitigating Unwanted
+Biases with Adversarial Learning,” AAAI/ACM Conference on Artificial
+Intelligence, Ethics, and Society, 2018.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unprivileged_groups</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a>) – Representation for unprivileged groups</p></li>
+<li><p><strong>privileged_groups</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a>) – Representation for privileged groups</p></li>
+<li><p><strong>scope_name</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – scope name for the tenforflow variables</p></li>
+<li><p><strong>sess</strong> (<em>tf.Session</em>) – tensorflow session</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a><em>, </em><em>optional</em>) – Seed to make <code class="docutils literal notranslate"><span class="pre">predict</span></code> repeatable.</p></li>
+<li><p><strong>adversary_loss_weight</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Hyperparameter that chooses
+the strength of the adversarial loss.</p></li>
+<li><p><strong>num_epochs</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a><em>, </em><em>optional</em>) – Number of training epochs.</p></li>
+<li><p><strong>batch_size</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a><em>, </em><em>optional</em>) – Batch size.</p></li>
+<li><p><strong>classifier_num_hidden_units</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a><em>, </em><em>optional</em>) – Number of hidden units
+in the classifier model.</p></li>
+<li><p><strong>debias</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – Learn a classifier with or without
+debiasing.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></p></td>
+<td><p>Compute the model parameters of the fair classifier using gradient descent.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_predict</span></code></p></td>
+<td><p>Train a model on the input and predict the labels.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_transform</span></code></p></td>
+<td><p>Train a model on the input and transform the dataset accordingly.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></p></td>
+<td><p>Obtain the predictions for the provided dataset using the fair classifier learned.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></p></td>
+<td><p>Return a new dataset generated by running this Transformer on the input.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.algorithms.preprocessing.Reweighing.html" class="btn btn-neutral float-left" title="aif360.algorithms.preprocessing.Reweighing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aif360.algorithms.inprocessing.ARTClassifier.html" class="btn btn-neutral float-right" title="aif360.algorithms.inprocessing.ARTClassifier" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

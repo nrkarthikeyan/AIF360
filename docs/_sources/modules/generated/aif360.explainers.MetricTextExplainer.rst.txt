@@ -1,0 +1,174 @@
+﻿:mod:`aif360.explainers`.MetricTextExplainer
+===================================================
+
+.. currentmodule:: aif360.explainers
+
+.. autoclass:: MetricTextExplainer
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~MetricTextExplainer.accuracy
+      
+      
+        ~MetricTextExplainer.average_abs_odds_difference
+      
+      
+        ~MetricTextExplainer.average_odds_difference
+      
+      
+        ~MetricTextExplainer.between_all_groups_coefficient_of_variation
+      
+      
+        ~MetricTextExplainer.between_all_groups_generalized_entropy_index
+      
+      
+        ~MetricTextExplainer.between_all_groups_theil_index
+      
+      
+        ~MetricTextExplainer.between_group_coefficient_of_variation
+      
+      
+        ~MetricTextExplainer.between_group_generalized_entropy_index
+      
+      
+        ~MetricTextExplainer.between_group_theil_index
+      
+      
+        ~MetricTextExplainer.coefficient_of_variation
+      
+      
+        ~MetricTextExplainer.consistency
+      
+      
+        ~MetricTextExplainer.disparate_impact
+      
+      
+        ~MetricTextExplainer.equal_opportunity_difference
+      
+      
+        ~MetricTextExplainer.error_rate
+      
+      
+        ~MetricTextExplainer.error_rate_difference
+      
+      
+        ~MetricTextExplainer.error_rate_ratio
+      
+      
+        ~MetricTextExplainer.false_discovery_rate
+      
+      
+        ~MetricTextExplainer.false_discovery_rate_difference
+      
+      
+        ~MetricTextExplainer.false_discovery_rate_ratio
+      
+      
+        ~MetricTextExplainer.false_negative_rate
+      
+      
+        ~MetricTextExplainer.false_negative_rate_difference
+      
+      
+        ~MetricTextExplainer.false_negative_rate_ratio
+      
+      
+        ~MetricTextExplainer.false_omission_rate
+      
+      
+        ~MetricTextExplainer.false_omission_rate_ratio
+      
+      
+        ~MetricTextExplainer.false_positive_rate
+      
+      
+        ~MetricTextExplainer.false_positive_rate_difference
+      
+      
+        ~MetricTextExplainer.false_positive_rate_ratio
+      
+      
+        ~MetricTextExplainer.falses_omission_rate_difference
+      
+      
+        ~MetricTextExplainer.generalized_entropy_index
+      
+      
+        ~MetricTextExplainer.mean_difference
+      
+      
+        ~MetricTextExplainer.negative_predictive_value
+      
+      
+        ~MetricTextExplainer.num_false_negatives
+      
+      
+        ~MetricTextExplainer.num_false_positives
+      
+      
+        ~MetricTextExplainer.num_instances
+      
+      
+        ~MetricTextExplainer.num_negatives
+      
+      
+        ~MetricTextExplainer.num_positives
+      
+      
+        ~MetricTextExplainer.num_pred_negatives
+      
+      
+        ~MetricTextExplainer.num_pred_positives
+      
+      
+        ~MetricTextExplainer.num_true_negatives
+      
+      
+        ~MetricTextExplainer.num_true_positives
+      
+      
+        ~MetricTextExplainer.positive_predictive_value
+      
+      
+        ~MetricTextExplainer.power
+      
+      
+        ~MetricTextExplainer.precision
+      
+      
+        ~MetricTextExplainer.recall
+      
+      
+        ~MetricTextExplainer.sensitivity
+      
+      
+        ~MetricTextExplainer.specificity
+      
+      
+        ~MetricTextExplainer.statistical_parity_difference
+      
+      
+        ~MetricTextExplainer.theil_index
+      
+      
+        ~MetricTextExplainer.true_negative_rate
+      
+      
+        ~MetricTextExplainer.true_positive_rate
+      
+      
+        ~MetricTextExplainer.true_positive_rate_difference
+      
+   
+   
+
+   
+   
+   

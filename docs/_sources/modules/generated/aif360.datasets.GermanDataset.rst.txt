@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.GermanDataset
+===========================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: GermanDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~GermanDataset.align_datasets
+      
+      
+        ~GermanDataset.convert_to_dataframe
+      
+      
+        ~GermanDataset.copy
+      
+      
+        ~GermanDataset.export_dataset
+      
+      
+        ~GermanDataset.import_dataset
+      
+      
+        ~GermanDataset.split
+      
+      
+        ~GermanDataset.subset
+      
+      
+        ~GermanDataset.temporarily_ignore
+      
+      
+        ~GermanDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,42 @@
+﻿:mod:`aif360.sklearn.postprocessing`.PostProcessingMeta
+==============================================================
+
+.. currentmodule:: aif360.sklearn.postprocessing
+
+.. autoclass:: PostProcessingMeta
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~PostProcessingMeta.fit
+      
+      
+        ~PostProcessingMeta.get_params
+      
+      
+        ~PostProcessingMeta.predict
+      
+      
+        ~PostProcessingMeta.predict_log_proba
+      
+      
+        ~PostProcessingMeta.predict_proba
+      
+      
+        ~PostProcessingMeta.score
+      
+      
+        ~PostProcessingMeta.set_params
+      
+   
+   
+
+   
+   
+   

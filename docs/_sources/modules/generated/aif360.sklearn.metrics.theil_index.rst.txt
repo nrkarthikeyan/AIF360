@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.theil_index
+======================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: theil_index

@@ -1,0 +1,39 @@
+﻿:mod:`aif360.sklearn.inprocessing`.ExponentiatedGradientReduction
+========================================================================
+
+.. currentmodule:: aif360.sklearn.inprocessing
+
+.. autoclass:: ExponentiatedGradientReduction
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~ExponentiatedGradientReduction.fit
+      
+      
+        ~ExponentiatedGradientReduction.get_params
+      
+      
+        ~ExponentiatedGradientReduction.predict
+      
+      
+        ~ExponentiatedGradientReduction.predict_proba
+      
+      
+        ~ExponentiatedGradientReduction.score
+      
+      
+        ~ExponentiatedGradientReduction.set_params
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scikit-learn-Compatible API Reference &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="aif360.sklearn.datasets.ColumnAlreadyDroppedWarning" href="generated/aif360.sklearn.datasets.ColumnAlreadyDroppedWarning.html" />
+    <link rel="prev" title="aif360.metrics.utils.compute_distance" href="generated/aif360.metrics.utils.compute_distance.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.sklearn.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>: Dataset loading functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utils">Utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.ColumnAlreadyDroppedWarning.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.ColumnAlreadyDroppedWarning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.check_already_dropped.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.check_already_dropped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.standardize_dataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.standardize_dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.to_dataframe.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.to_dataframe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#loaders">Loaders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_adult.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_adult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_german.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_german</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_bank.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_bank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_compas.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_compas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_lawschool_gpa.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_lawschool_gpa</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>: Fairness metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#meta-metrics">Meta-metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.ratio.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.ratio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scorers">Scorers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.make_scorer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.make_scorer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#generic-metrics">Generic metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.specificity_score.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.specificity_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.sensitivity_score.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.sensitivity_score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.base_rate.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.base_rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.selection_rate.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.selection_rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_fpr.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.generalized_fpr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_fnr.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.generalized_fnr</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#group-fairness-metrics">Group fairness metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.statistical_parity_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.statistical_parity_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.mean_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.mean_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.disparate_impact_ratio.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.disparate_impact_ratio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.equal_opportunity_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.equal_opportunity_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.average_odds_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.average_odds_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.average_odds_error.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.average_odds_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.between_group_generalized_entropy_error.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.between_group_generalized_entropy_error</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#individual-fairness-metrics">Individual fairness metrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_entropy_index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.generalized_entropy_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_entropy_error.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.generalized_entropy_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.theil_index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.theil_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.coefficient_of_variation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.coefficient_of_variation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.metrics.consistency_score.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.consistency_score</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.sklearn.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.preprocessing</span></code>: Pre-processing algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pre-processors">Pre-processors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.preprocessing.Reweighing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.preprocessing</span></code>.Reweighing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#meta-estimator">Meta-Estimator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.preprocessing.ReweighingMeta.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.preprocessing</span></code>.ReweighingMeta</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.sklearn.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code>: In-processing algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#in-processors">In-processors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.inprocessing.AdversarialDebiasing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code>.AdversarialDebiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.inprocessing.ExponentiatedGradientReduction.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code>.ExponentiatedGradientReduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.inprocessing.GridSearchReduction.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code>.GridSearchReduction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.sklearn.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.postprocessing</span></code>: Post-processing algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#post-processors">Post-processors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.postprocessing.CalibratedEqualizedOdds.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.postprocessing</span></code>.CalibratedEqualizedOdds</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Meta-Estimator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.postprocessing.PostProcessingMeta.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.postprocessing</span></code>.PostProcessingMeta</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.sklearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.utils</span></code>: Utility functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#validation">Validation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.utils.check_inputs.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.utils</span></code>.check_inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/aif360.sklearn.utils.check_groups.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.utils</span></code>.check_groups</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/sklearn.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scikit-learn-compatible-api-reference">
+<h1><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference<a class="headerlink" href="#scikit-learn-compatible-api-reference" title="Permalink to this headline">¶</a></h1>
+<p>This is the class and function reference for the <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-compatible
+version of the AIF360 API. It is functionally equivalent to the normal API but
+it uses scikit-learn paradigms (where possible) and <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> for
+datasets. Not all functionality from AIF360 is supported yet. See
+<a class="reference external" href="https://github.com/Trusted-AI/AIF360/examples/sklearn/demo_new_features.ipynb">Getting Started</a>
+for a demo of the capabilities.</p>
+<p>Note: This is under active development. Visit our
+<a class="reference external" href="https://github.com/Trusted-AI/AIF360">GitHub page</a> if you’d like to contribute!</p>
+<section id="module-aif360.sklearn.datasets">
+<span id="aif360-sklearn-datasets-dataset-loading-functions"></span><h2><a class="reference internal" href="#module-aif360.sklearn.datasets" title="aif360.sklearn.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code></a>: Dataset loading functions<a class="headerlink" href="#module-aif360.sklearn.datasets" title="Permalink to this headline">¶</a></h2>
+<p>The dataset format for <code class="docutils literal notranslate"><span class="pre">aif360.sklearn</span></code> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> with
+protected attributes in the index.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, while all scikit-learn classes will accept DataFrames as inputs,
+most classes will return a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>. Therefore, many pre-
+processing steps, when placed before an <code class="docutils literal notranslate"><span class="pre">aif360.sklearn</span></code> step in a
+Pipeline, will cause errors.</p>
+</div>
+<section id="utils">
+<h3>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.ColumnAlreadyDroppedWarning.html#aif360.sklearn.datasets.ColumnAlreadyDroppedWarning" title="aif360.sklearn.datasets.ColumnAlreadyDroppedWarning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.ColumnAlreadyDroppedWarning</span></code></a></p></td>
+<td><p>Warning used if a column is attempted to be dropped twice.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.check_already_dropped.html#aif360.sklearn.datasets.check_already_dropped" title="aif360.sklearn.datasets.check_already_dropped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.check_already_dropped</span></code></a>(labels, ...)</p></td>
+<td><p>Check if columns have already been dropped and return only those that haven't.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.standardize_dataset.html#aif360.sklearn.datasets.standardize_dataset" title="aif360.sklearn.datasets.standardize_dataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.standardize_dataset</span></code></a>(df, prot_attr, ...)</p></td>
+<td><p>Separate data, targets, and possibly sample weights and populate protected attributes as sample properties.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.to_dataframe.html#aif360.sklearn.datasets.to_dataframe" title="aif360.sklearn.datasets.to_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.to_dataframe</span></code></a>(data)</p></td>
+<td><p>Format an OpenML dataset Bunch as a DataFrame with categorical features if needed.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="loaders">
+<h3>Loaders<a class="headerlink" href="#loaders" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_adult.html#aif360.sklearn.datasets.fetch_adult" title="aif360.sklearn.datasets.fetch_adult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.fetch_adult</span></code></a>([subset, data_home, ...])</p></td>
+<td><p>Load the Adult Census Income Dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_german.html#aif360.sklearn.datasets.fetch_german" title="aif360.sklearn.datasets.fetch_german"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.fetch_german</span></code></a>([data_home, ...])</p></td>
+<td><p>Load the German Credit Dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_bank.html#aif360.sklearn.datasets.fetch_bank" title="aif360.sklearn.datasets.fetch_bank"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.fetch_bank</span></code></a>([data_home, percent10, ...])</p></td>
+<td><p>Load the Bank Marketing Dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_compas.html#aif360.sklearn.datasets.fetch_compas" title="aif360.sklearn.datasets.fetch_compas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.fetch_compas</span></code></a>([data_home, ...])</p></td>
+<td><p>Load the COMPAS Recidivism Risk Scores dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.datasets.fetch_lawschool_gpa.html#aif360.sklearn.datasets.fetch_lawschool_gpa" title="aif360.sklearn.datasets.fetch_lawschool_gpa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datasets.fetch_lawschool_gpa</span></code></a>([subset, ...])</p></td>
+<td><p>Load the Law School GPA dataset</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-aif360.sklearn.metrics">
+<span id="aif360-sklearn-metrics-fairness-metrics"></span><h2><a class="reference internal" href="#module-aif360.sklearn.metrics" title="aif360.sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code></a>: Fairness metrics<a class="headerlink" href="#module-aif360.sklearn.metrics" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">aif360.sklearn</span></code> implements a number of fairness metrics for group fairness
+and individual fairness. For guidance on which metric to use for a given
+application, see our
+<a class="reference external" href="http://aif360.mybluemix.net/resources#guidance">Guidance</a> page.</p>
+<section id="meta-metrics">
+<h3>Meta-metrics<a class="headerlink" href="#meta-metrics" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.difference.html#aif360.sklearn.metrics.difference" title="aif360.sklearn.metrics.difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.difference</span></code></a>(func, y, *args[, ...])</p></td>
+<td><p>Compute the difference between unprivileged and privileged subsets for an arbitrary metric.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.ratio.html#aif360.sklearn.metrics.ratio" title="aif360.sklearn.metrics.ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.ratio</span></code></a>(func, y, *args[, prot_attr, ...])</p></td>
+<td><p>Compute the ratio between unprivileged and privileged subsets for an arbitrary metric.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scorers">
+<h3>Scorers<a class="headerlink" href="#scorers" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.make_scorer.html#aif360.sklearn.metrics.make_scorer" title="aif360.sklearn.metrics.make_scorer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.make_scorer</span></code></a>(score_func[, is_ratio])</p></td>
+<td><p>Make a scorer from a 'difference' or 'ratio' metric (e.g.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="generic-metrics">
+<h3>Generic metrics<a class="headerlink" href="#generic-metrics" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.specificity_score.html#aif360.sklearn.metrics.specificity_score" title="aif360.sklearn.metrics.specificity_score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.specificity_score</span></code></a>(y_true, y_pred[, ...])</p></td>
+<td><p>Compute the specificity or true negative rate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.sensitivity_score.html#aif360.sklearn.metrics.sensitivity_score" title="aif360.sklearn.metrics.sensitivity_score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.sensitivity_score</span></code></a>(y_true, y_pred[, ...])</p></td>
+<td><p>Alias of <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html#sklearn.metrics.recall_score" title="(in scikit-learn v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.metrics.recall_score()</span></code></a> for binary classes only.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.base_rate.html#aif360.sklearn.metrics.base_rate" title="aif360.sklearn.metrics.base_rate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.base_rate</span></code></a>(y_true[, y_pred, ...])</p></td>
+<td><p>Compute the base rate, <span class="math notranslate nohighlight">\(Pr(Y = \text{pos_label}) = \frac{P}{P+N}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.selection_rate.html#aif360.sklearn.metrics.selection_rate" title="aif360.sklearn.metrics.selection_rate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.selection_rate</span></code></a>(y_true, y_pred[, ...])</p></td>
+<td><p>Compute the selection rate, <span class="math notranslate nohighlight">\(Pr(\hat{Y} = \text{pos_label}) = \frac{TP + FP}{P + N}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_fpr.html#aif360.sklearn.metrics.generalized_fpr" title="aif360.sklearn.metrics.generalized_fpr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.generalized_fpr</span></code></a>(y_true, probas_pred)</p></td>
+<td><p>Return the ratio of generalized false positives to negative examples in the dataset, <span class="math notranslate nohighlight">\(GFPR = \tfrac{GFP}{N}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_fnr.html#aif360.sklearn.metrics.generalized_fnr" title="aif360.sklearn.metrics.generalized_fnr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.generalized_fnr</span></code></a>(y_true, probas_pred)</p></td>
+<td><p>Return the ratio of generalized false negatives to positive examples in the dataset, <span class="math notranslate nohighlight">\(GFNR = \tfrac{GFN}{P}\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="group-fairness-metrics">
+<h3>Group fairness metrics<a class="headerlink" href="#group-fairness-metrics" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.statistical_parity_difference.html#aif360.sklearn.metrics.statistical_parity_difference" title="aif360.sklearn.metrics.statistical_parity_difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.statistical_parity_difference</span></code></a>(*y[, ...])</p></td>
+<td><p>Difference in selection rates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.mean_difference.html#aif360.sklearn.metrics.mean_difference" title="aif360.sklearn.metrics.mean_difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.mean_difference</span></code></a>(*y[, prot_attr, ...])</p></td>
+<td><p>Alias of <code class="xref py py-func docutils literal notranslate"><span class="pre">statistical_parity_difference()</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.disparate_impact_ratio.html#aif360.sklearn.metrics.disparate_impact_ratio" title="aif360.sklearn.metrics.disparate_impact_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.disparate_impact_ratio</span></code></a>(*y[, ...])</p></td>
+<td><p>Ratio of selection rates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.equal_opportunity_difference.html#aif360.sklearn.metrics.equal_opportunity_difference" title="aif360.sklearn.metrics.equal_opportunity_difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.equal_opportunity_difference</span></code></a>(y_true, ...)</p></td>
+<td><p>A relaxed version of equality of opportunity.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.average_odds_difference.html#aif360.sklearn.metrics.average_odds_difference" title="aif360.sklearn.metrics.average_odds_difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.average_odds_difference</span></code></a>(y_true, y_pred)</p></td>
+<td><p>A relaxed version of equality of odds.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.average_odds_error.html#aif360.sklearn.metrics.average_odds_error" title="aif360.sklearn.metrics.average_odds_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.average_odds_error</span></code></a>(y_true, y_pred[, ...])</p></td>
+<td><p>A relaxed version of equality of odds.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.between_group_generalized_entropy_error.html#aif360.sklearn.metrics.between_group_generalized_entropy_error" title="aif360.sklearn.metrics.between_group_generalized_entropy_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.between_group_generalized_entropy_error</span></code></a>(...)</p></td>
+<td><p>Compute the between-group generalized entropy.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="individual-fairness-metrics">
+<h3>Individual fairness metrics<a class="headerlink" href="#individual-fairness-metrics" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_entropy_index.html#aif360.sklearn.metrics.generalized_entropy_index" title="aif360.sklearn.metrics.generalized_entropy_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.generalized_entropy_index</span></code></a>(b[, alpha])</p></td>
+<td><p>Generalized entropy index measures inequality over a population.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.generalized_entropy_error.html#aif360.sklearn.metrics.generalized_entropy_error" title="aif360.sklearn.metrics.generalized_entropy_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.generalized_entropy_error</span></code></a>(y_true, y_pred)</p></td>
+<td><p>Compute the generalized entropy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.theil_index.html#aif360.sklearn.metrics.theil_index" title="aif360.sklearn.metrics.theil_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.theil_index</span></code></a>(b)</p></td>
+<td><p>The Theil index is the <code class="xref py py-func docutils literal notranslate"><span class="pre">generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 1\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.coefficient_of_variation.html#aif360.sklearn.metrics.coefficient_of_variation" title="aif360.sklearn.metrics.coefficient_of_variation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.coefficient_of_variation</span></code></a>(b)</p></td>
+<td><p>The coefficient of variation is two times the square root of the <code class="xref py py-func docutils literal notranslate"><span class="pre">generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 2\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.metrics.consistency_score.html#aif360.sklearn.metrics.consistency_score" title="aif360.sklearn.metrics.consistency_score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.consistency_score</span></code></a>(X, y[, n_neighbors])</p></td>
+<td><p>Compute the consistency score.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-aif360.sklearn.preprocessing">
+<span id="aif360-sklearn-preprocessing-pre-processing-algorithms"></span><h2><a class="reference internal" href="#module-aif360.sklearn.preprocessing" title="aif360.sklearn.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.preprocessing</span></code></a>: Pre-processing algorithms<a class="headerlink" href="#module-aif360.sklearn.preprocessing" title="Permalink to this headline">¶</a></h2>
+<p>Pre-processing algorithms modify a dataset to be more fair (data in, data out).</p>
+<section id="pre-processors">
+<h3>Pre-processors<a class="headerlink" href="#pre-processors" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.preprocessing.Reweighing.html#aif360.sklearn.preprocessing.Reweighing" title="aif360.sklearn.preprocessing.Reweighing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocessing.Reweighing</span></code></a>([prot_attr])</p></td>
+<td><p>Sample reweighing.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="meta-estimator">
+<h3>Meta-Estimator<a class="headerlink" href="#meta-estimator" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.preprocessing.ReweighingMeta.html#aif360.sklearn.preprocessing.ReweighingMeta" title="aif360.sklearn.preprocessing.ReweighingMeta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocessing.ReweighingMeta</span></code></a>(estimator[, ...])</p></td>
+<td><p>A meta-estimator which wraps a given estimator with a reweighing preprocessing step.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-aif360.sklearn.inprocessing">
+<span id="aif360-sklearn-inprocessing-in-processing-algorithms"></span><h2><a class="reference internal" href="#module-aif360.sklearn.inprocessing" title="aif360.sklearn.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code></a>: In-processing algorithms<a class="headerlink" href="#module-aif360.sklearn.inprocessing" title="Permalink to this headline">¶</a></h2>
+<p>In-processing algorithms train a fair classifier (data in, predictions out).</p>
+<section id="in-processors">
+<h3>In-processors<a class="headerlink" href="#in-processors" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.inprocessing.AdversarialDebiasing.html#aif360.sklearn.inprocessing.AdversarialDebiasing" title="aif360.sklearn.inprocessing.AdversarialDebiasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inprocessing.AdversarialDebiasing</span></code></a>([...])</p></td>
+<td><p>Debiasing with adversarial learning.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.inprocessing.ExponentiatedGradientReduction.html#aif360.sklearn.inprocessing.ExponentiatedGradientReduction" title="aif360.sklearn.inprocessing.ExponentiatedGradientReduction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inprocessing.ExponentiatedGradientReduction</span></code></a>(...)</p></td>
+<td><p>Exponentiated gradient reduction for fair classification.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.inprocessing.GridSearchReduction.html#aif360.sklearn.inprocessing.GridSearchReduction" title="aif360.sklearn.inprocessing.GridSearchReduction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inprocessing.GridSearchReduction</span></code></a>(prot_attr, ...)</p></td>
+<td><p>Grid search reduction for fair classification or regression.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-aif360.sklearn.postprocessing">
+<span id="aif360-sklearn-postprocessing-post-processing-algorithms"></span><h2><a class="reference internal" href="#module-aif360.sklearn.postprocessing" title="aif360.sklearn.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.postprocessing</span></code></a>: Post-processing algorithms<a class="headerlink" href="#module-aif360.sklearn.postprocessing" title="Permalink to this headline">¶</a></h2>
+<p>Post-processing algorithms modify predictions to be more fair (predictions in,
+predictions out).</p>
+<section id="post-processors">
+<h3>Post-processors<a class="headerlink" href="#post-processors" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.postprocessing.CalibratedEqualizedOdds.html#aif360.sklearn.postprocessing.CalibratedEqualizedOdds" title="aif360.sklearn.postprocessing.CalibratedEqualizedOdds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">postprocessing.CalibratedEqualizedOdds</span></code></a>([...])</p></td>
+<td><p>Calibrated equalized odds post-processor.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id1">
+<h3>Meta-Estimator<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.postprocessing.PostProcessingMeta.html#aif360.sklearn.postprocessing.PostProcessingMeta" title="aif360.sklearn.postprocessing.PostProcessingMeta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">postprocessing.PostProcessingMeta</span></code></a>(estimator)</p></td>
+<td><p>A meta-estimator which wraps a given estimator with a post-processing step.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="module-aif360.sklearn.utils">
+<span id="aif360-sklearn-utils-utility-functions"></span><h2><a class="reference internal" href="#module-aif360.sklearn.utils" title="aif360.sklearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.utils</span></code></a>: Utility functions<a class="headerlink" href="#module-aif360.sklearn.utils" title="Permalink to this headline">¶</a></h2>
+<section id="validation">
+<h3>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.sklearn.utils.check_inputs.html#aif360.sklearn.utils.check_inputs" title="aif360.sklearn.utils.check_inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils.check_inputs</span></code></a>(X, y[, sample_weight, ...])</p></td>
+<td><p>Input validation for debiasing algorithms.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.sklearn.utils.check_groups.html#aif360.sklearn.utils.check_groups" title="aif360.sklearn.utils.check_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils.check_groups</span></code></a>(arr, prot_attr[, ...])</p></td>
+<td><p>Get groups from the index of arr.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="generated/aif360.metrics.utils.compute_distance.html" class="btn btn-neutral float-left" title="aif360.metrics.utils.compute_distance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/aif360.sklearn.datasets.ColumnAlreadyDroppedWarning.html" class="btn btn-neutral float-right" title="aif360.sklearn.datasets.ColumnAlreadyDroppedWarning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

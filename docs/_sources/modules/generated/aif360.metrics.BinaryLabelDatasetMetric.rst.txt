@@ -1,0 +1,57 @@
+﻿:mod:`aif360.metrics`.BinaryLabelDatasetMetric
+=====================================================
+
+.. currentmodule:: aif360.metrics
+
+.. autoclass:: BinaryLabelDatasetMetric
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~BinaryLabelDatasetMetric.base_rate
+      
+      
+        ~BinaryLabelDatasetMetric.consistency
+      
+      
+        ~BinaryLabelDatasetMetric.difference
+      
+      
+        ~BinaryLabelDatasetMetric.disparate_impact
+      
+      
+        ~BinaryLabelDatasetMetric.mean_difference
+      
+      
+        ~BinaryLabelDatasetMetric.num_instances
+      
+      
+        ~BinaryLabelDatasetMetric.num_negatives
+      
+      
+        ~BinaryLabelDatasetMetric.num_positives
+      
+      
+        ~BinaryLabelDatasetMetric.ratio
+      
+      
+        ~BinaryLabelDatasetMetric.rich_subgroup
+      
+      
+        ~BinaryLabelDatasetMetric.smoothed_empirical_differential_fairness
+      
+      
+        ~BinaryLabelDatasetMetric.statistical_parity_difference
+      
+   
+   
+
+   
+   
+   

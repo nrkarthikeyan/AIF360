@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.postprocessing`.EqOddsPostprocessing
+===================================================================
+
+.. currentmodule:: aif360.algorithms.postprocessing
+
+.. autoclass:: EqOddsPostprocessing
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~EqOddsPostprocessing.fit
+      
+      
+        ~EqOddsPostprocessing.fit_predict
+      
+      
+        ~EqOddsPostprocessing.fit_transform
+      
+      
+        ~EqOddsPostprocessing.predict
+      
+      
+        ~EqOddsPostprocessing.transform
+      
+   
+   
+
+   
+   
+   

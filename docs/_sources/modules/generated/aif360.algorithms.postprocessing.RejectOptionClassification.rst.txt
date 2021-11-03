@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.postprocessing`.RejectOptionClassification
+=========================================================================
+
+.. currentmodule:: aif360.algorithms.postprocessing
+
+.. autoclass:: RejectOptionClassification
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~RejectOptionClassification.fit
+      
+      
+        ~RejectOptionClassification.fit_predict
+      
+      
+        ~RejectOptionClassification.fit_transform
+      
+      
+        ~RejectOptionClassification.predict
+      
+      
+        ~RejectOptionClassification.transform
+      
+   
+   
+
+   
+   
+   

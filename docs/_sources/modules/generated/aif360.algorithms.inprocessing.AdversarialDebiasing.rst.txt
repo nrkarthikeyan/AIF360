@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.inprocessing`.AdversarialDebiasing
+=================================================================
+
+.. currentmodule:: aif360.algorithms.inprocessing
+
+.. autoclass:: AdversarialDebiasing
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~AdversarialDebiasing.fit
+      
+      
+        ~AdversarialDebiasing.fit_predict
+      
+      
+        ~AdversarialDebiasing.fit_transform
+      
+      
+        ~AdversarialDebiasing.predict
+      
+      
+        ~AdversarialDebiasing.transform
+      
+   
+   
+
+   
+   
+   

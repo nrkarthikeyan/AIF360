@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.sklearn.metrics.average_odds_error &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="aif360.sklearn.metrics.between_group_generalized_entropy_error" href="aif360.sklearn.metrics.between_group_generalized_entropy_error.html" />
+    <link rel="prev" title="aif360.sklearn.metrics.average_odds_difference" href="aif360.sklearn.metrics.average_odds_difference.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>: Dataset loading functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>: Fairness metrics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#meta-metrics">Meta-metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#scorers">Scorers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#generic-metrics">Generic metrics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../sklearn.html#group-fairness-metrics">Group fairness metrics</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.statistical_parity_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.statistical_parity_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.mean_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.mean_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.disparate_impact_ratio.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.disparate_impact_ratio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.equal_opportunity_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.equal_opportunity_difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.average_odds_difference.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.average_odds_difference</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.average_odds_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.between_group_generalized_entropy_error.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.between_group_generalized_entropy_error</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#individual-fairness-metrics">Individual fairness metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.preprocessing</span></code>: Pre-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code>: In-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.postprocessing</span></code>: Post-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.utils</span></code>: Utility functions</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.average_odds_error</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.sklearn.metrics.average_odds_error.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-sklearn-metrics-average-odds-error">
+<h1><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.metrics" title="aif360.sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code></a>.average_odds_error<a class="headerlink" href="#aif360-sklearn-metrics-average-odds-error" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="aif360.sklearn.metrics.average_odds_error">
+<span class="sig-prename descclassname"><span class="pre">aif360.sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">average_odds_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prot_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/sklearn/metrics/metrics.py#L385-L418"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.sklearn.metrics.average_odds_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>A relaxed version of equality of odds.</p>
+<p>Returns the average of the absolute difference in FPR and TPR for the
+unprivileged and privileged groups:</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{|FPR_{D = \text{unprivileged}} - FPR_{D = \text{privileged}}|
++ |TPR_{D = \text{unprivileged}} - TPR_{D = \text{privileged}}|}{2}\]</div>
+<p>A value of 0 indicates equality of odds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v1.3.4)"><em>pandas.Series</em></a>) – Ground truth (correct) target values.</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – Estimated targets as returned by a classifier.</p></li>
+<li><p><strong>prot_attr</strong> (<em>array-like</em><em>, </em><em>keyword-only</em>) – Protected attribute(s). If
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, all protected attributes in y_true are used.</p></li>
+<li><p><strong>priv_group</strong> (<em>scalar</em><em>, </em><em>optional</em>) – The label of the privileged group.</p></li>
+<li><p><strong>pos_label</strong> (<em>scalar</em><em>, </em><em>optional</em>) – The label of the positive class.</p></li>
+<li><p><strong>sample_weight</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Sample weights.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>float</em> – Average odds error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.sklearn.metrics.average_odds_difference.html" class="btn btn-neutral float-left" title="aif360.sklearn.metrics.average_odds_difference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aif360.sklearn.metrics.between_group_generalized_entropy_error.html" class="btn btn-neutral float-right" title="aif360.sklearn.metrics.between_group_generalized_entropy_error" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

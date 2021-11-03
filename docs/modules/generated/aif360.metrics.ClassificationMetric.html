@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.metrics.ClassificationMetric &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="aif360.metrics.SampleDistortionMetric" href="aif360.metrics.SampleDistortionMetric.html" />
+    <link rel="prev" title="aif360.metrics.BinaryLabelDatasetMetric" href="aif360.metrics.BinaryLabelDatasetMetric.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../metrics.html">Fairness Metrics</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../metrics.html#module-aif360.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="aif360.metrics.DatasetMetric.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.DatasetMetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.metrics.BinaryLabelDatasetMetric.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.BinaryLabelDatasetMetric</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.ClassificationMetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aif360.metrics.SampleDistortionMetric.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.SampleDistortionMetric</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../metrics.html#module-aif360.metrics.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../metrics.html">Fairness Metrics</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.ClassificationMetric</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.metrics.ClassificationMetric.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-metrics-classificationmetric">
+<h1><a class="reference internal" href="../metrics.html#module-aif360.metrics" title="aif360.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code></a>.ClassificationMetric<a class="headerlink" href="#aif360-metrics-classificationmetric" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="aif360.metrics.ClassificationMetric">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">aif360.metrics.</span></span><span class="sig-name descname"><span class="pre">ClassificationMetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classified_dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unprivileged_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">privileged_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/metrics/classification_metric.py#L10-L860"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.metrics.ClassificationMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for computing metrics based on two BinaryLabelDatasets.</p>
+<p>The first dataset is the original one and the second is the output of the
+classification transformer (or similar).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<a class="reference internal" href="aif360.datasets.BinaryLabelDataset.html#aif360.datasets.BinaryLabelDataset" title="aif360.datasets.BinaryLabelDataset"><em>BinaryLabelDataset</em></a>) – Dataset containing ground-truth
+labels.</p></li>
+<li><p><strong>classified_dataset</strong> (<a class="reference internal" href="aif360.datasets.BinaryLabelDataset.html#aif360.datasets.BinaryLabelDataset" title="aif360.datasets.BinaryLabelDataset"><em>BinaryLabelDataset</em></a>) – Dataset containing
+predictions.</p></li>
+<li><p><strong>privileged_groups</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a><em>)</em>) – Privileged groups. Format is a list
+of <code class="docutils literal notranslate"><span class="pre">dicts</span></code> where the keys are <code class="docutils literal notranslate"><span class="pre">protected_attribute_names</span></code> and
+the values are values in <code class="docutils literal notranslate"><span class="pre">protected_attributes</span></code>. Each <code class="docutils literal notranslate"><span class="pre">dict</span></code>
+element describes a single group. See examples for more details.</p></li>
+<li><p><strong>unprivileged_groups</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a><em>)</em>) – Unprivileged groups in the same
+format as <code class="docutils literal notranslate"><span class="pre">privileged_groups</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(in Python v3.7)"><strong>TypeError</strong></a> – <code class="docutils literal notranslate"><span class="pre">dataset</span></code> and <code class="docutils literal notranslate"><span class="pre">classified_dataset</span></code> must be
+    <a class="reference internal" href="aif360.datasets.BinaryLabelDataset.html#aif360.datasets.BinaryLabelDataset" title="aif360.datasets.BinaryLabelDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BinaryLabelDataset</span></code></a> types.</p>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">accuracy</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(ACC = (TP + TN)/(P + N)\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_abs_odds_difference</span></code></p></td>
+<td><p>Average of absolute difference in FPR and TPR for unprivileged and privileged groups:</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_odds_difference</span></code></p></td>
+<td><p>Average of difference in FPR and TPR for unprivileged and privileged groups:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">base_rate</span></code></p></td>
+<td><p>Compute the base rate, <span class="math notranslate nohighlight">\(Pr(Y = 1) = P/(P+N)\)</span>, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">between_all_groups_coefficient_of_variation</span></code></p></td>
+<td><p>The between-group coefficient of variation is two times the square root of the <code class="xref py py-meth docutils literal notranslate"><span class="pre">between_all_groups_generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 2\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">between_all_groups_generalized_entropy_index</span></code></p></td>
+<td><p>Between-group generalized entropy index that uses all combinations of groups based on <code class="docutils literal notranslate"><span class="pre">self.dataset.protected_attributes</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">between_all_groups_theil_index</span></code></p></td>
+<td><p>The between-group Theil index is the <code class="xref py py-meth docutils literal notranslate"><span class="pre">between_all_groups_generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 1\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">between_group_coefficient_of_variation</span></code></p></td>
+<td><p>The between-group coefficient of variation is two times the square root of the <code class="xref py py-meth docutils literal notranslate"><span class="pre">between_group_generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 2\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">between_group_generalized_entropy_index</span></code></p></td>
+<td><p>Between-group generalized entropy index that uses <code class="docutils literal notranslate"><span class="pre">self.privileged_groups</span></code> and <code class="docutils literal notranslate"><span class="pre">self.unprivileged_groups</span></code> as the only two groups.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">between_group_theil_index</span></code></p></td>
+<td><p>The between-group Theil index is the <code class="xref py py-meth docutils literal notranslate"><span class="pre">between_group_generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 1\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">binary_confusion_matrix</span></code></p></td>
+<td><p>Compute the number of true/false positives/negatives, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">coefficient_of_variation</span></code></p></td>
+<td><p>The coefficient of variation is two times the square root of the <code class="xref py py-meth docutils literal notranslate"><span class="pre">generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 2\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">consistency</span></code></p></td>
+<td><p>Individual fairness metric from <a href="#id5"><span class="problematic" id="id1">[1]_</span></a> that measures how similar the labels are for similar instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">difference</span></code></p></td>
+<td><p>Compute difference of the metric for unprivileged and privileged groups.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">differential_fairness_bias_amplification</span></code></p></td>
+<td><p>Bias amplification is the difference in smoothed EDF between the classifier and the original dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">disparate_impact</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">equal_opportunity_difference</span></code></p></td>
+<td><p>Alias of <code class="xref py py-meth docutils literal notranslate"><span class="pre">true_positive_rate_difference()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">error_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(ERR = (FP + FN)/(P + N)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">error_rate_difference</span></code></p></td>
+<td><p>Difference in error rates for unprivileged and privileged groups, <span class="math notranslate nohighlight">\(ERR_{D = \text{unprivileged}} - ERR_{D = \text{privileged}}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">error_rate_ratio</span></code></p></td>
+<td><p>Ratio of error rates for unprivileged and privileged groups, <span class="math notranslate nohighlight">\(\frac{ERR_{D = \text{unprivileged}}}{ERR_{D = \text{privileged}}}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_discovery_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FDR = FP/(TP + FP)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_discovery_rate_difference</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FDR_{D = \text{unprivileged}} - FDR_{D = \text{privileged}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_discovery_rate_ratio</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{FDR_{D = \text{unprivileged}}}{FDR_{D = \text{privileged}}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_negative_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FNR = FN/P\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_negative_rate_difference</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FNR_{D = \text{unprivileged}} - FNR_{D = \text{privileged}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_negative_rate_ratio</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{FNR_{D = \text{unprivileged}}}{FNR_{D = \text{privileged}}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_omission_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FOR = FN/(TN + FN)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_omission_rate_difference</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FOR_{D = \text{unprivileged}} - FOR_{D = \text{privileged}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_omission_rate_ratio</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{FOR_{D = \text{unprivileged}}}{FOR_{D = \text{privileged}}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_positive_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FPR = FP/N\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_positive_rate_difference</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FPR_{D = \text{unprivileged}} - FPR_{D = \text{privileged}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">false_positive_rate_ratio</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{FPR_{D = \text{unprivileged}}}{FPR_{D = \text{privileged}}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generalized_binary_confusion_matrix</span></code></p></td>
+<td><p>Compute the number of generalized true/false positives/negatives, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generalized_entropy_index</span></code></p></td>
+<td><p>Generalized entropy index is proposed as a unified individual and group fairness measure in <a href="#id6"><span class="problematic" id="id2">[3]_</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generalized_false_negative_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(GFNR = GFN/P\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generalized_false_positive_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(GFPR = GFP/N\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generalized_true_negative_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(GTNR = GTN/N\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generalized_true_positive_rate</span></code></p></td>
+<td><p>Return the ratio of generalized true positives to positive examples in the dataset, <span class="math notranslate nohighlight">\(GTPR = GTP/P\)</span>, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_difference</span></code></p></td>
+<td><p>Alias of <code class="xref py py-meth docutils literal notranslate"><span class="pre">statistical_parity_difference()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">negative_predictive_value</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(NPV = TN/(TN + FN)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_false_negatives</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FN = \sum_{i=1}^n \mathbb{1}[y_i = \text{favorable}]\mathbb{1}[\hat{y}_i = \text{unfavorable}]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_false_positives</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(FP = \sum_{i=1}^n \mathbb{1}[y_i = \text{unfavorable}]\mathbb{1}[\hat{y}_i = \text{favorable}]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_generalized_false_negatives</span></code></p></td>
+<td><p>Return the generalized number of false negatives, <span class="math notranslate nohighlight">\(GFN\)</span>, the weighted sum of 1 - predicted scores where true labels are 'favorable', optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_generalized_false_positives</span></code></p></td>
+<td><p>Return the generalized number of false positives, <span class="math notranslate nohighlight">\(GFP\)</span>, the weighted sum of predicted scores where true labels are 'unfavorable', optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_generalized_true_negatives</span></code></p></td>
+<td><p>Return the generalized number of true negatives, <span class="math notranslate nohighlight">\(GTN\)</span>, the weighted sum of 1 - predicted scores where true labels are 'unfavorable', optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_generalized_true_positives</span></code></p></td>
+<td><p>Return the generalized number of true positives, <span class="math notranslate nohighlight">\(GTP\)</span>, the weighted sum of predicted scores where true labels are 'favorable', optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_instances</span></code></p></td>
+<td><p>Compute the number of instances, <span class="math notranslate nohighlight">\(n\)</span>, in the dataset conditioned on protected attributes if necessary.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_negatives</span></code></p></td>
+<td><p>Compute the number of negatives, <span class="math notranslate nohighlight">\(N = \sum_{i=1}^n \mathbb{1}[y_i = 0]\)</span>, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_positives</span></code></p></td>
+<td><p>Compute the number of positives, <span class="math notranslate nohighlight">\(P = \sum_{i=1}^n \mathbb{1}[y_i = 1]\)</span>, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_pred_negatives</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum_{i=1}^n \mathbb{1}[\hat{y}_i = \text{unfavorable}]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_pred_positives</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum_{i=1}^n \mathbb{1}[\hat{y}_i = \text{favorable}]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_true_negatives</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(TN = \sum_{i=1}^n \mathbb{1}[y_i = \text{unfavorable}]\mathbb{1}[\hat{y}_i = \text{unfavorable}]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_true_positives</span></code></p></td>
+<td><p>Return the number of instances in the dataset where both the predicted and true labels are 'favorable', <span class="math notranslate nohighlight">\(TP = \sum_{i=1}^n \mathbb{1}[y_i = \text{favorable}]\mathbb{1}[\hat{y}_i = \text{favorable}]\)</span>, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">performance_measures</span></code></p></td>
+<td><p>Compute various performance measures on the dataset, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">positive_predictive_value</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(PPV = TP/(TP + FP)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">power</span></code></p></td>
+<td><p>Alias of <code class="xref py py-meth docutils literal notranslate"><span class="pre">num_true_positives()</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">precision</span></code></p></td>
+<td><p>Alias of <code class="xref py py-meth docutils literal notranslate"><span class="pre">positive_predictive_value()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ratio</span></code></p></td>
+<td><p>Compute ratio of the metric for unprivileged and privileged groups.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">recall</span></code></p></td>
+<td><p>Alias of <code class="xref py py-meth docutils literal notranslate"><span class="pre">true_positive_rate()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rich_subgroup</span></code></p></td>
+<td><p>Audit dataset with respect to rich subgroups defined by linear thresholds of sensitive attributes</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">selection_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(Pr(\hat{Y} = \text{favorable})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sensitivity</span></code></p></td>
+<td><p>Alias of <code class="xref py py-meth docutils literal notranslate"><span class="pre">true_positive_rate()</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothed_empirical_differential_fairness</span></code></p></td>
+<td><p>Smoothed EDF from <a href="#id7"><span class="problematic" id="id3">[#foulds18]_</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">specificity</span></code></p></td>
+<td><p>Alias of <code class="xref py py-meth docutils literal notranslate"><span class="pre">true_negative_rate()</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">statistical_parity_difference</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">theil_index</span></code></p></td>
+<td><p>The Theil index is the <code class="xref py py-meth docutils literal notranslate"><span class="pre">generalized_entropy_index()</span></code> with <span class="math notranslate nohighlight">\(\alpha = 1\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">true_negative_rate</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(TNR = TN/N\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">true_positive_rate</span></code></p></td>
+<td><p>Return the ratio of true positives to positive examples in the dataset, <span class="math notranslate nohighlight">\(TPR = TP/P\)</span>, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">true_positive_rate_difference</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(TPR_{D = \text{unprivileged}} - TPR_{D = \text{privileged}}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.metrics.BinaryLabelDatasetMetric.html" class="btn btn-neutral float-left" title="aif360.metrics.BinaryLabelDatasetMetric" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aif360.metrics.SampleDistortionMetric.html" class="btn btn-neutral float-right" title="aif360.metrics.SampleDistortionMetric" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

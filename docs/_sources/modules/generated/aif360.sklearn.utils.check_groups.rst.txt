@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.utils`.check_groups
+=====================================================
+
+.. currentmodule:: aif360.sklearn.utils
+
+.. autofunction:: check_groups

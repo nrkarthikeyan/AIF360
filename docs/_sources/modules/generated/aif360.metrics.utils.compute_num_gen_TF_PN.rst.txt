@@ -1,0 +1,6 @@
+﻿:mod:`aif360.metrics.utils`.compute_num_gen_TF_PN
+==============================================================
+
+.. currentmodule:: aif360.metrics.utils
+
+.. autofunction:: compute_num_gen_TF_PN

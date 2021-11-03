@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.preprocessing`.LFR
+=================================================
+
+.. currentmodule:: aif360.algorithms.preprocessing
+
+.. autoclass:: LFR
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~LFR.fit
+      
+      
+        ~LFR.fit_predict
+      
+      
+        ~LFR.fit_transform
+      
+      
+        ~LFR.predict
+      
+      
+        ~LFR.transform
+      
+   
+   
+
+   
+   
+   

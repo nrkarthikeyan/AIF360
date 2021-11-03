@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.between_group_generalized_entropy_error
+==================================================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: between_group_generalized_entropy_error

@@ -1,0 +1,228 @@
+﻿:mod:`aif360.metrics`.ClassificationMetric
+=================================================
+
+.. currentmodule:: aif360.metrics
+
+.. autoclass:: ClassificationMetric
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~ClassificationMetric.accuracy
+      
+      
+        ~ClassificationMetric.average_abs_odds_difference
+      
+      
+        ~ClassificationMetric.average_odds_difference
+      
+      
+        ~ClassificationMetric.base_rate
+      
+      
+        ~ClassificationMetric.between_all_groups_coefficient_of_variation
+      
+      
+        ~ClassificationMetric.between_all_groups_generalized_entropy_index
+      
+      
+        ~ClassificationMetric.between_all_groups_theil_index
+      
+      
+        ~ClassificationMetric.between_group_coefficient_of_variation
+      
+      
+        ~ClassificationMetric.between_group_generalized_entropy_index
+      
+      
+        ~ClassificationMetric.between_group_theil_index
+      
+      
+        ~ClassificationMetric.binary_confusion_matrix
+      
+      
+        ~ClassificationMetric.coefficient_of_variation
+      
+      
+        ~ClassificationMetric.consistency
+      
+      
+        ~ClassificationMetric.difference
+      
+      
+        ~ClassificationMetric.differential_fairness_bias_amplification
+      
+      
+        ~ClassificationMetric.disparate_impact
+      
+      
+        ~ClassificationMetric.equal_opportunity_difference
+      
+      
+        ~ClassificationMetric.error_rate
+      
+      
+        ~ClassificationMetric.error_rate_difference
+      
+      
+        ~ClassificationMetric.error_rate_ratio
+      
+      
+        ~ClassificationMetric.false_discovery_rate
+      
+      
+        ~ClassificationMetric.false_discovery_rate_difference
+      
+      
+        ~ClassificationMetric.false_discovery_rate_ratio
+      
+      
+        ~ClassificationMetric.false_negative_rate
+      
+      
+        ~ClassificationMetric.false_negative_rate_difference
+      
+      
+        ~ClassificationMetric.false_negative_rate_ratio
+      
+      
+        ~ClassificationMetric.false_omission_rate
+      
+      
+        ~ClassificationMetric.false_omission_rate_difference
+      
+      
+        ~ClassificationMetric.false_omission_rate_ratio
+      
+      
+        ~ClassificationMetric.false_positive_rate
+      
+      
+        ~ClassificationMetric.false_positive_rate_difference
+      
+      
+        ~ClassificationMetric.false_positive_rate_ratio
+      
+      
+        ~ClassificationMetric.generalized_binary_confusion_matrix
+      
+      
+        ~ClassificationMetric.generalized_entropy_index
+      
+      
+        ~ClassificationMetric.generalized_false_negative_rate
+      
+      
+        ~ClassificationMetric.generalized_false_positive_rate
+      
+      
+        ~ClassificationMetric.generalized_true_negative_rate
+      
+      
+        ~ClassificationMetric.generalized_true_positive_rate
+      
+      
+        ~ClassificationMetric.mean_difference
+      
+      
+        ~ClassificationMetric.negative_predictive_value
+      
+      
+        ~ClassificationMetric.num_false_negatives
+      
+      
+        ~ClassificationMetric.num_false_positives
+      
+      
+        ~ClassificationMetric.num_generalized_false_negatives
+      
+      
+        ~ClassificationMetric.num_generalized_false_positives
+      
+      
+        ~ClassificationMetric.num_generalized_true_negatives
+      
+      
+        ~ClassificationMetric.num_generalized_true_positives
+      
+      
+        ~ClassificationMetric.num_instances
+      
+      
+        ~ClassificationMetric.num_negatives
+      
+      
+        ~ClassificationMetric.num_positives
+      
+      
+        ~ClassificationMetric.num_pred_negatives
+      
+      
+        ~ClassificationMetric.num_pred_positives
+      
+      
+        ~ClassificationMetric.num_true_negatives
+      
+      
+        ~ClassificationMetric.num_true_positives
+      
+      
+        ~ClassificationMetric.performance_measures
+      
+      
+        ~ClassificationMetric.positive_predictive_value
+      
+      
+        ~ClassificationMetric.power
+      
+      
+        ~ClassificationMetric.precision
+      
+      
+        ~ClassificationMetric.ratio
+      
+      
+        ~ClassificationMetric.recall
+      
+      
+        ~ClassificationMetric.rich_subgroup
+      
+      
+        ~ClassificationMetric.selection_rate
+      
+      
+        ~ClassificationMetric.sensitivity
+      
+      
+        ~ClassificationMetric.smoothed_empirical_differential_fairness
+      
+      
+        ~ClassificationMetric.specificity
+      
+      
+        ~ClassificationMetric.statistical_parity_difference
+      
+      
+        ~ClassificationMetric.theil_index
+      
+      
+        ~ClassificationMetric.true_negative_rate
+      
+      
+        ~ClassificationMetric.true_positive_rate
+      
+      
+        ~ClassificationMetric.true_positive_rate_difference
+      
+   
+   
+
+   
+   
+   

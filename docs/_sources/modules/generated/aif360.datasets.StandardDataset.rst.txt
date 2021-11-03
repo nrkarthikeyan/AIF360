@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.StandardDataset
+=============================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: StandardDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~StandardDataset.align_datasets
+      
+      
+        ~StandardDataset.convert_to_dataframe
+      
+      
+        ~StandardDataset.copy
+      
+      
+        ~StandardDataset.export_dataset
+      
+      
+        ~StandardDataset.import_dataset
+      
+      
+        ~StandardDataset.split
+      
+      
+        ~StandardDataset.subset
+      
+      
+        ~StandardDataset.temporarily_ignore
+      
+      
+        ~StandardDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

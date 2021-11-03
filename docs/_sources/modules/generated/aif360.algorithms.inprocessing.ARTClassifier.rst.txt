@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.inprocessing`.ARTClassifier
+==========================================================
+
+.. currentmodule:: aif360.algorithms.inprocessing
+
+.. autoclass:: ARTClassifier
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~ARTClassifier.fit
+      
+      
+        ~ARTClassifier.fit_predict
+      
+      
+        ~ARTClassifier.fit_transform
+      
+      
+        ~ARTClassifier.predict
+      
+      
+        ~ARTClassifier.transform
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.statistical_parity_difference
+========================================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: statistical_parity_difference

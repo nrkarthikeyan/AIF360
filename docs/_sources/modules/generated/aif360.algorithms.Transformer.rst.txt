@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms`.Transformer
+===========================================
+
+.. currentmodule:: aif360.algorithms
+
+.. autoclass:: Transformer
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~Transformer.fit
+      
+      
+        ~Transformer.fit_predict
+      
+      
+        ~Transformer.fit_transform
+      
+      
+        ~Transformer.predict
+      
+      
+        ~Transformer.transform
+      
+   
+   
+
+   
+   
+   

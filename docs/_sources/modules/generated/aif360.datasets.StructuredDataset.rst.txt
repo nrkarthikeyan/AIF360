@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.StructuredDataset
+===============================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: StructuredDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~StructuredDataset.align_datasets
+      
+      
+        ~StructuredDataset.convert_to_dataframe
+      
+      
+        ~StructuredDataset.copy
+      
+      
+        ~StructuredDataset.export_dataset
+      
+      
+        ~StructuredDataset.import_dataset
+      
+      
+        ~StructuredDataset.split
+      
+      
+        ~StructuredDataset.subset
+      
+      
+        ~StructuredDataset.temporarily_ignore
+      
+      
+        ~StructuredDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

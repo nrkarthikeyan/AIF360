@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.inprocessing`.ExponentiatedGradientReduction
+===========================================================================
+
+.. currentmodule:: aif360.algorithms.inprocessing
+
+.. autoclass:: ExponentiatedGradientReduction
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~ExponentiatedGradientReduction.fit
+      
+      
+        ~ExponentiatedGradientReduction.fit_predict
+      
+      
+        ~ExponentiatedGradientReduction.fit_transform
+      
+      
+        ~ExponentiatedGradientReduction.predict
+      
+      
+        ~ExponentiatedGradientReduction.transform
+      
+   
+   
+
+   
+   
+   

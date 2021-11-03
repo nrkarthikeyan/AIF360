@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fairness Metrics &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="aif360.metrics.DatasetMetric" href="generated/aif360.metrics.DatasetMetric.html" />
+    <link rel="prev" title="aif360.explainers.MetricJSONExplainer" href="generated/aif360.explainers.MetricJSONExplainer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explainers.html">Explainers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fairness Metrics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.DatasetMetric.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.DatasetMetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.BinaryLabelDatasetMetric.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.BinaryLabelDatasetMetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.ClassificationMetric.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.ClassificationMetric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.SampleDistortionMetric.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code>.SampleDistortionMetric</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.metrics.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.utils.compute_boolean_conditioning_vector.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code>.compute_boolean_conditioning_vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_instances.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code>.compute_num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_pos_neg.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code>.compute_num_pos_neg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_TF_PN.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code>.compute_num_TF_PN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_gen_TF_PN.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code>.compute_num_gen_TF_PN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.metrics.utils.compute_distance.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code>.compute_distance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Fairness Metrics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/metrics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fairness-metrics">
+<h1>Fairness Metrics<a class="headerlink" href="#fairness-metrics" title="Permalink to this headline">¶</a></h1>
+<section id="module-aif360.metrics">
+<span id="aif360-metrics"></span><h2><a class="reference internal" href="#module-aif360.metrics" title="aif360.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics</span></code></a><a class="headerlink" href="#module-aif360.metrics" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.metrics.DatasetMetric.html#aif360.metrics.DatasetMetric" title="aif360.metrics.DatasetMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.DatasetMetric</span></code></a>(dataset[, ...])</p></td>
+<td><p>Class for computing metrics based on one StructuredDataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.metrics.BinaryLabelDatasetMetric.html#aif360.metrics.BinaryLabelDatasetMetric" title="aif360.metrics.BinaryLabelDatasetMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.BinaryLabelDatasetMetric</span></code></a>(dataset[, ...])</p></td>
+<td><p>Class for computing metrics based on a single <a class="reference internal" href="generated/aif360.datasets.BinaryLabelDataset.html#aif360.datasets.BinaryLabelDataset" title="aif360.datasets.BinaryLabelDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BinaryLabelDataset</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.metrics.ClassificationMetric.html#aif360.metrics.ClassificationMetric" title="aif360.metrics.ClassificationMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.ClassificationMetric</span></code></a>(dataset, ...[, ...])</p></td>
+<td><p>Class for computing metrics based on two BinaryLabelDatasets.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.metrics.SampleDistortionMetric.html#aif360.metrics.SampleDistortionMetric" title="aif360.metrics.SampleDistortionMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.SampleDistortionMetric</span></code></a>(dataset, ...)</p></td>
+<td><p>Class for computing metrics based on two StructuredDatasets.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-aif360.metrics.utils">
+<span id="aif360-metrics-utils"></span><h2><a class="reference internal" href="#module-aif360.metrics.utils" title="aif360.metrics.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.metrics.utils</span></code></a><a class="headerlink" href="#module-aif360.metrics.utils" title="Permalink to this headline">¶</a></h2>
+<p>This is the helper script for implementing metrics.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.metrics.utils.compute_boolean_conditioning_vector.html#aif360.metrics.utils.compute_boolean_conditioning_vector" title="aif360.metrics.utils.compute_boolean_conditioning_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.utils.compute_boolean_conditioning_vector</span></code></a>(X, ...)</p></td>
+<td><p>Compute the boolean conditioning vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_instances.html#aif360.metrics.utils.compute_num_instances" title="aif360.metrics.utils.compute_num_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.utils.compute_num_instances</span></code></a>(X, w, ...)</p></td>
+<td><p>Compute the number of instances, <span class="math notranslate nohighlight">\(n\)</span>, conditioned on the protected attribute(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_pos_neg.html#aif360.metrics.utils.compute_num_pos_neg" title="aif360.metrics.utils.compute_num_pos_neg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.utils.compute_num_pos_neg</span></code></a>(X, y, w, ...)</p></td>
+<td><p>Compute the number of positives, <span class="math notranslate nohighlight">\(P\)</span>, or negatives, <span class="math notranslate nohighlight">\(N\)</span>, optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_TF_PN.html#aif360.metrics.utils.compute_num_TF_PN" title="aif360.metrics.utils.compute_num_TF_PN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.utils.compute_num_TF_PN</span></code></a>(X, y_true, ...)</p></td>
+<td><p>Compute the number of true/false positives/negatives optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.metrics.utils.compute_num_gen_TF_PN.html#aif360.metrics.utils.compute_num_gen_TF_PN" title="aif360.metrics.utils.compute_num_gen_TF_PN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.utils.compute_num_gen_TF_PN</span></code></a>(X, ...)</p></td>
+<td><p>Compute the number of generalized true/false positives/negatives optionally conditioned on protected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.metrics.utils.compute_distance.html#aif360.metrics.utils.compute_distance" title="aif360.metrics.utils.compute_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics.utils.compute_distance</span></code></a>(X_orig, ...)</p></td>
+<td><p>Compute the distance element-wise for two sets of vectors.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="generated/aif360.explainers.MetricJSONExplainer.html" class="btn btn-neutral float-left" title="aif360.explainers.MetricJSONExplainer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/aif360.metrics.DatasetMetric.html" class="btn btn-neutral float-right" title="aif360.metrics.DatasetMetric" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

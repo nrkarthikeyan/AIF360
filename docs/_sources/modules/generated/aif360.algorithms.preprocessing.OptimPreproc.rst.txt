@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.preprocessing`.OptimPreproc
+==========================================================
+
+.. currentmodule:: aif360.algorithms.preprocessing
+
+.. autoclass:: OptimPreproc
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~OptimPreproc.fit
+      
+      
+        ~OptimPreproc.fit_predict
+      
+      
+        ~OptimPreproc.fit_transform
+      
+      
+        ~OptimPreproc.predict
+      
+      
+        ~OptimPreproc.transform
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,93 @@
+﻿:mod:`aif360.metrics`.SampleDistortionMetric
+===================================================
+
+.. currentmodule:: aif360.metrics
+
+.. autoclass:: SampleDistortionMetric
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~SampleDistortionMetric.average
+      
+      
+        ~SampleDistortionMetric.average_euclidean_distance
+      
+      
+        ~SampleDistortionMetric.average_mahalanobis_distance
+      
+      
+        ~SampleDistortionMetric.average_manhattan_distance
+      
+      
+        ~SampleDistortionMetric.difference
+      
+      
+        ~SampleDistortionMetric.euclidean_distance
+      
+      
+        ~SampleDistortionMetric.mahalanobis_distance
+      
+      
+        ~SampleDistortionMetric.manhattan_distance
+      
+      
+        ~SampleDistortionMetric.maximum
+      
+      
+        ~SampleDistortionMetric.maximum_euclidean_distance
+      
+      
+        ~SampleDistortionMetric.maximum_mahalanobis_distance
+      
+      
+        ~SampleDistortionMetric.maximum_manhattan_distance
+      
+      
+        ~SampleDistortionMetric.mean_euclidean_distance_difference
+      
+      
+        ~SampleDistortionMetric.mean_euclidean_distance_ratio
+      
+      
+        ~SampleDistortionMetric.mean_mahalanobis_distance_difference
+      
+      
+        ~SampleDistortionMetric.mean_mahalanobis_distance_ratio
+      
+      
+        ~SampleDistortionMetric.mean_manhattan_distance_difference
+      
+      
+        ~SampleDistortionMetric.mean_manhattan_distance_ratio
+      
+      
+        ~SampleDistortionMetric.num_instances
+      
+      
+        ~SampleDistortionMetric.ratio
+      
+      
+        ~SampleDistortionMetric.total
+      
+      
+        ~SampleDistortionMetric.total_euclidean_distance
+      
+      
+        ~SampleDistortionMetric.total_mahalanobis_distance
+      
+      
+        ~SampleDistortionMetric.total_manhattan_distance
+      
+   
+   
+
+   
+   
+   

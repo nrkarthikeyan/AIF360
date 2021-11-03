@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.average_odds_difference
+==================================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: average_odds_difference

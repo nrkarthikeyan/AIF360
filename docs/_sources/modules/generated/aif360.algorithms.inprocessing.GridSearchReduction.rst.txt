@@ -1,0 +1,36 @@
+﻿:mod:`aif360.algorithms.inprocessing`.GridSearchReduction
+================================================================
+
+.. currentmodule:: aif360.algorithms.inprocessing
+
+.. autoclass:: GridSearchReduction
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~GridSearchReduction.fit
+      
+      
+        ~GridSearchReduction.fit_predict
+      
+      
+        ~GridSearchReduction.fit_transform
+      
+      
+        ~GridSearchReduction.predict
+      
+      
+        ~GridSearchReduction.transform
+      
+   
+   
+
+   
+   
+   

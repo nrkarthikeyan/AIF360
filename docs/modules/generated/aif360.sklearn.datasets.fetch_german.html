@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.sklearn.datasets.fetch_german &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="aif360.sklearn.datasets.fetch_bank" href="aif360.sklearn.datasets.fetch_bank.html" />
+    <link rel="prev" title="aif360.sklearn.datasets.fetch_adult" href="aif360.sklearn.datasets.fetch_adult.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>: Dataset loading functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#utils">Utils</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../sklearn.html#loaders">Loaders</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.datasets.fetch_adult.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_adult</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_german</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.datasets.fetch_bank.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_bank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.datasets.fetch_compas.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_compas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.datasets.fetch_lawschool_gpa.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_lawschool_gpa</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>: Fairness metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.preprocessing</span></code>: Pre-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code>: In-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.postprocessing</span></code>: Post-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.utils</span></code>: Utility functions</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>.fetch_german</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.sklearn.datasets.fetch_german.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-sklearn-datasets-fetch-german">
+<h1><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.datasets" title="aif360.sklearn.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code></a>.fetch_german<a class="headerlink" href="#aif360-sklearn-datasets-fetch-german" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="aif360.sklearn.datasets.fetch_german">
+<span class="sig-prename descclassname"><span class="pre">aif360.sklearn.datasets.</span></span><span class="sig-name descname"><span class="pre">fetch_german</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_home</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary_age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usecols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropcols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numeric_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropna</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/sklearn/datasets/openml_datasets.py#L104-L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.sklearn.datasets.fetch_german" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the German Credit Dataset.</p>
+<p>Protected attributes are ‘sex’ (‘male’ is privileged and ‘female’ is
+unprivileged) and ‘age’ (binarized by default as recommended by
+<a class="footnote-reference brackets" href="#kamiran09" id="id1">1</a>: age &gt;= 25 is considered privileged and age &lt; 25 is considered
+unprivileged; see the binary_age flag to keep this continuous). The outcome
+variable is ‘credit-risk’: ‘good’ (favorable) or ‘bad’ (unfavorable).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, the data is downloaded from OpenML. See the <a class="reference external" href="https://www.openml.org/d/31">credit-g</a> page for details.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_home</strong> (<em>string</em><em>, </em><em>optional</em>) – Specify another download and cache folder
+for the datasets. By default all AIF360 datasets are stored in
+‘aif360/sklearn/data/raw’ subfolders.</p></li>
+<li><p><strong>binary_age</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, split protected attribute,
+‘age’, into ‘aged’ (privileged) and ‘youth’ (unprivileged). The
+‘age’ feature remains continuous.</p></li>
+<li><p><strong>usecols</strong> (<em>single label</em><em> or </em><em>list-like</em><em>, </em><em>optional</em>) – Column name(s) to keep.
+All others are dropped.</p></li>
+<li><p><strong>dropcols</strong> (<em>single label</em><em> or </em><em>list-like</em><em>, </em><em>optional</em>) – Column name(s) to drop.</p></li>
+<li><p><strong>numeric_only</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Drop all non-numeric feature columns.</p></li>
+<li><p><strong>dropna</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Drop rows with NAs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>namedtuple</em> – Tuple containing X and y for the German dataset accessible
+by index or name.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_openml.html#sklearn.datasets.fetch_openml" title="(in scikit-learn v1.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.datasets.fetch_openml()</span></code></a></p>
+</div>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="kamiran09"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/4909197">F. Kamiran and T. Calders, “Classifying without
+discriminating,” 2nd International Conference on Computer,
+Control and Communication, 2009.</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">german</span> <span class="o">=</span> <span class="n">fetch_german</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">german</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(1000, 21)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">german_num</span> <span class="o">=</span> <span class="n">fetch_german</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">german_num</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(1000, 7)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">fetch_german</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">disparate_impact_ratio</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">prot_attr</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">priv_group</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="n">pos_label</span><span class="o">=</span><span class="s1">&#39;good&#39;</span><span class="p">)</span>
+<span class="go">0.9483094846144106</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.sklearn.datasets.fetch_adult.html" class="btn btn-neutral float-left" title="aif360.sklearn.datasets.fetch_adult" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aif360.sklearn.datasets.fetch_bank.html" class="btn btn-neutral float-right" title="aif360.sklearn.datasets.fetch_bank" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

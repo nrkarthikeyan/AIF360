@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.sensitivity_score
+============================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: sensitivity_score

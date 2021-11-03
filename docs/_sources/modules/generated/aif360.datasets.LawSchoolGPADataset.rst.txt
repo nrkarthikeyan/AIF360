@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.LawSchoolGPADataset
+=================================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: LawSchoolGPADataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~LawSchoolGPADataset.align_datasets
+      
+      
+        ~LawSchoolGPADataset.convert_to_dataframe
+      
+      
+        ~LawSchoolGPADataset.copy
+      
+      
+        ~LawSchoolGPADataset.export_dataset
+      
+      
+        ~LawSchoolGPADataset.import_dataset
+      
+      
+        ~LawSchoolGPADataset.split
+      
+      
+        ~LawSchoolGPADataset.subset
+      
+      
+        ~LawSchoolGPADataset.temporarily_ignore
+      
+      
+        ~LawSchoolGPADataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

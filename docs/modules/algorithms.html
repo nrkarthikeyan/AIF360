@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithms &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="aif360.algorithms.preprocessing.DisparateImpactRemover" href="generated/aif360.algorithms.preprocessing.DisparateImpactRemover.html" />
+    <link rel="prev" title="AI Fairness 360 documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.algorithms.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.preprocessing</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.preprocessing.DisparateImpactRemover.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.preprocessing</span></code>.DisparateImpactRemover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.preprocessing.LFR.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.preprocessing</span></code>.LFR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.preprocessing.OptimPreproc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.preprocessing</span></code>.OptimPreproc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.preprocessing.Reweighing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.preprocessing</span></code>.Reweighing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.algorithms.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.inprocessing.AdversarialDebiasing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.AdversarialDebiasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.inprocessing.ARTClassifier.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.ARTClassifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.inprocessing.GerryFairClassifier.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.GerryFairClassifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.inprocessing.MetaFairClassifier.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.MetaFairClassifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.inprocessing.PrejudiceRemover.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.PrejudiceRemover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.inprocessing.ExponentiatedGradientReduction.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.ExponentiatedGradientReduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.inprocessing.GridSearchReduction.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code>.GridSearchReduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.algorithms.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.postprocessing</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.postprocessing.CalibratedEqOddsPostprocessing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.postprocessing</span></code>.CalibratedEqOddsPostprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.postprocessing.EqOddsPostprocessing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.postprocessing</span></code>.EqOddsPostprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.postprocessing.RejectOptionClassification.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.postprocessing</span></code>.RejectOptionClassification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aif360.algorithms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/aif360.algorithms.Transformer.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms</span></code>.Transformer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Algorithms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/algorithms.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="algorithms">
+<h1>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this headline">¶</a></h1>
+<section id="module-aif360.algorithms.preprocessing">
+<span id="aif360-algorithms-preprocessing"></span><h2><a class="reference internal" href="#module-aif360.algorithms.preprocessing" title="aif360.algorithms.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.preprocessing</span></code></a><a class="headerlink" href="#module-aif360.algorithms.preprocessing" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.preprocessing.DisparateImpactRemover.html#aif360.algorithms.preprocessing.DisparateImpactRemover" title="aif360.algorithms.preprocessing.DisparateImpactRemover"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.preprocessing.DisparateImpactRemover</span></code></a>([...])</p></td>
+<td><p>Disparate impact remover is a preprocessing technique that edits feature values increase group fairness while preserving rank-ordering within groups <a href="#id11"><span class="problematic" id="id1">[1]_</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.algorithms.preprocessing.LFR.html#aif360.algorithms.preprocessing.LFR" title="aif360.algorithms.preprocessing.LFR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.preprocessing.LFR</span></code></a>(...[, k, Ax, ...])</p></td>
+<td><p>Learning fair representations is a pre-processing technique that finds a latent representation which encodes the data well but obfuscates information about protected attributes <a href="#id12"><span class="problematic" id="id2">[2]_</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.preprocessing.OptimPreproc.html#aif360.algorithms.preprocessing.OptimPreproc" title="aif360.algorithms.preprocessing.OptimPreproc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.preprocessing.OptimPreproc</span></code></a>(...[, ...])</p></td>
+<td><p>Optimized preprocessing is a preprocessing technique that learns a probabilistic transformation that edits the features and labels in the data with group fairness, individual distortion, and data fidelity constraints and objectives <a href="#id13"><span class="problematic" id="id3">[3]_</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.algorithms.preprocessing.Reweighing.html#aif360.algorithms.preprocessing.Reweighing" title="aif360.algorithms.preprocessing.Reweighing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.preprocessing.Reweighing</span></code></a>(...)</p></td>
+<td><p>Reweighing is a preprocessing technique that Weights the examples in each (group, label) combination differently to ensure fairness before classification <a href="#id14"><span class="problematic" id="id4">[4]_</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-aif360.algorithms.inprocessing">
+<span id="aif360-algorithms-inprocessing"></span><h2><a class="reference internal" href="#module-aif360.algorithms.inprocessing" title="aif360.algorithms.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.inprocessing</span></code></a><a class="headerlink" href="#module-aif360.algorithms.inprocessing" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.inprocessing.AdversarialDebiasing.html#aif360.algorithms.inprocessing.AdversarialDebiasing" title="aif360.algorithms.inprocessing.AdversarialDebiasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.inprocessing.AdversarialDebiasing</span></code></a>(...)</p></td>
+<td><p>Adversarial debiasing is an in-processing technique that learns a classifier to maximize prediction accuracy and simultaneously reduce an adversary's ability to determine the protected attribute from the predictions <a href="#id15"><span class="problematic" id="id5">[5]_</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.algorithms.inprocessing.ARTClassifier.html#aif360.algorithms.inprocessing.ARTClassifier" title="aif360.algorithms.inprocessing.ARTClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.inprocessing.ARTClassifier</span></code></a>(...)</p></td>
+<td><p>Wraps an instance of an <code class="xref py py-obj docutils literal notranslate"><span class="pre">art.classifiers.Classifier</span></code> to extend <a class="reference internal" href="generated/aif360.algorithms.Transformer.html#aif360.algorithms.Transformer" title="aif360.algorithms.Transformer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transformer</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.inprocessing.GerryFairClassifier.html#aif360.algorithms.inprocessing.GerryFairClassifier" title="aif360.algorithms.inprocessing.GerryFairClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.inprocessing.GerryFairClassifier</span></code></a>([...])</p></td>
+<td><p>Model is an algorithm for learning classifiers that are fair with respect to rich subgroups.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.algorithms.inprocessing.MetaFairClassifier.html#aif360.algorithms.inprocessing.MetaFairClassifier" title="aif360.algorithms.inprocessing.MetaFairClassifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.inprocessing.MetaFairClassifier</span></code></a>([...])</p></td>
+<td><p>The meta algorithm here takes the fairness metric as part of the input and returns a classifier optimized w.r.t.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.inprocessing.PrejudiceRemover.html#aif360.algorithms.inprocessing.PrejudiceRemover" title="aif360.algorithms.inprocessing.PrejudiceRemover"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.inprocessing.PrejudiceRemover</span></code></a>([...])</p></td>
+<td><p>Prejudice remover is an in-processing technique that adds a discrimination-aware regularization term to the learning objective <a href="#id16"><span class="problematic" id="id6">[6]_</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.algorithms.inprocessing.ExponentiatedGradientReduction.html#aif360.algorithms.inprocessing.ExponentiatedGradientReduction" title="aif360.algorithms.inprocessing.ExponentiatedGradientReduction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.inprocessing.ExponentiatedGradientReduction</span></code></a>(...)</p></td>
+<td><p>Exponentiated gradient reduction for fair classification.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.inprocessing.GridSearchReduction.html#aif360.algorithms.inprocessing.GridSearchReduction" title="aif360.algorithms.inprocessing.GridSearchReduction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.inprocessing.GridSearchReduction</span></code></a>(...)</p></td>
+<td><p>Grid search reduction for fair classification or regression.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-aif360.algorithms.postprocessing">
+<span id="aif360-algorithms-postprocessing"></span><h2><a class="reference internal" href="#module-aif360.algorithms.postprocessing" title="aif360.algorithms.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms.postprocessing</span></code></a><a class="headerlink" href="#module-aif360.algorithms.postprocessing" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.postprocessing.CalibratedEqOddsPostprocessing.html#aif360.algorithms.postprocessing.CalibratedEqOddsPostprocessing" title="aif360.algorithms.postprocessing.CalibratedEqOddsPostprocessing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.postprocessing.CalibratedEqOddsPostprocessing</span></code></a>(...)</p></td>
+<td><p>Calibrated equalized odds postprocessing is a post-processing technique that optimizes over calibrated classifier score outputs to find probabilities with which to change output labels with an equalized odds objective <a href="#id17"><span class="problematic" id="id7">[7]_</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/aif360.algorithms.postprocessing.EqOddsPostprocessing.html#aif360.algorithms.postprocessing.EqOddsPostprocessing" title="aif360.algorithms.postprocessing.EqOddsPostprocessing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.postprocessing.EqOddsPostprocessing</span></code></a>(...)</p></td>
+<td><p>Equalized odds postprocessing is a post-processing technique that solves a linear program to find probabilities with which to change output labels to optimize equalized odds <a href="#id18"><span class="problematic" id="id8">[8]_</span></a> <a href="#id19"><span class="problematic" id="id9">[9]_</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.postprocessing.RejectOptionClassification.html#aif360.algorithms.postprocessing.RejectOptionClassification" title="aif360.algorithms.postprocessing.RejectOptionClassification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.postprocessing.RejectOptionClassification</span></code></a>(...)</p></td>
+<td><p>Reject option classification is a postprocessing technique that gives favorable outcomes to unpriviliged groups and unfavorable outcomes to priviliged groups in a confidence band around the decision boundary with the highest uncertainty <a href="#id20"><span class="problematic" id="id10">[10]_</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-aif360.algorithms">
+<span id="aif360-algorithms"></span><h2><a class="reference internal" href="#module-aif360.algorithms" title="aif360.algorithms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.algorithms</span></code></a><a class="headerlink" href="#module-aif360.algorithms" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/aif360.algorithms.Transformer.html#aif360.algorithms.Transformer" title="aif360.algorithms.Transformer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">algorithms.Transformer</span></code></a>(**kwargs)</p></td>
+<td><p>Abstract base class for transformers.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="AI Fairness 360 documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/aif360.algorithms.preprocessing.DisparateImpactRemover.html" class="btn btn-neutral float-right" title="aif360.algorithms.preprocessing.DisparateImpactRemover" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

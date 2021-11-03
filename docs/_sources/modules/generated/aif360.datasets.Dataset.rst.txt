@@ -1,0 +1,33 @@
+﻿:mod:`aif360.datasets`.Dataset
+=====================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: Dataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~Dataset.copy
+      
+      
+        ~Dataset.export_dataset
+      
+      
+        ~Dataset.split
+      
+      
+        ~Dataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,42 @@
+﻿:mod:`aif360.sklearn.inprocessing`.AdversarialDebiasing
+==============================================================
+
+.. currentmodule:: aif360.sklearn.inprocessing
+
+.. autoclass:: AdversarialDebiasing
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~AdversarialDebiasing.decision_function
+      
+      
+        ~AdversarialDebiasing.fit
+      
+      
+        ~AdversarialDebiasing.get_params
+      
+      
+        ~AdversarialDebiasing.predict
+      
+      
+        ~AdversarialDebiasing.predict_proba
+      
+      
+        ~AdversarialDebiasing.score
+      
+      
+        ~AdversarialDebiasing.set_params
+      
+   
+   
+
+   
+   
+   

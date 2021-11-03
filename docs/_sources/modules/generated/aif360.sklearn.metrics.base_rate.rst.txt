@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.base_rate
+====================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: base_rate

@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.selection_rate
+=========================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: selection_rate

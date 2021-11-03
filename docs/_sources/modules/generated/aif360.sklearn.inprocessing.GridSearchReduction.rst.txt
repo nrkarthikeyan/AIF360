@@ -1,0 +1,39 @@
+﻿:mod:`aif360.sklearn.inprocessing`.GridSearchReduction
+=============================================================
+
+.. currentmodule:: aif360.sklearn.inprocessing
+
+.. autoclass:: GridSearchReduction
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~GridSearchReduction.fit
+      
+      
+        ~GridSearchReduction.get_params
+      
+      
+        ~GridSearchReduction.predict
+      
+      
+        ~GridSearchReduction.predict_proba
+      
+      
+        ~GridSearchReduction.score
+      
+      
+        ~GridSearchReduction.set_params
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.datasets.LawSchoolGPADataset &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Explainers" href="../explainers.html" />
+    <link rel="prev" title="aif360.datasets.GermanDataset" href="aif360.datasets.GermanDataset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../datasets.html#module-aif360.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../datasets.html#base-classes">Base classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../datasets.html#common-datasets">Common datasets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.AdultDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.AdultDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.BankDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.BankDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.CompasDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.CompasDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.GermanDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.GermanDataset</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.LawSchoolGPADataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.LawSchoolGPADataset</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.datasets.LawSchoolGPADataset.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-datasets-lawschoolgpadataset">
+<h1><a class="reference internal" href="../datasets.html#module-aif360.datasets" title="aif360.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code></a>.LawSchoolGPADataset<a class="headerlink" href="#aif360-datasets-lawschoolgpadataset" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="aif360.datasets.LawSchoolGPADataset">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">aif360.datasets.</span></span><span class="sig-name descname"><span class="pre">LawSchoolGPADataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dep_var_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'zfygpa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protected_attribute_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['race']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">privileged_classes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[['white']]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_weights_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categorical_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_preprocessing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/datasets/law_school_gpa_dataset.py#L7-L38"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.datasets.LawSchoolGPADataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Law School GPA dataset.</p>
+<p>See <a class="reference external" href="https://github.com/microsoft/tempeh">https://github.com/microsoft/tempeh</a> for details.</p>
+<p>See <a class="reference internal" href="aif360.datasets.RegressionDataset.html#aif360.datasets.RegressionDataset" title="aif360.datasets.RegressionDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegressionDataset</span></code></a> for a description of the arguments.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_datasets</span></code></p></td>
+<td><p>Align the other dataset features, labels and protected_attributes to this dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_to_dataframe</span></code></p></td>
+<td><p>Convert the StructuredDataset to a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></p></td>
+<td><p>Convenience method to return a copy of this dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_dataset</span></code></p></td>
+<td><p>Export the dataset and supporting attributes TODO: The preferred file format is HDF</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_dataset</span></code></p></td>
+<td><p>Import the dataset and supporting attributes TODO: The preferred file format is HDF</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split</span></code></p></td>
+<td><p>Split this dataset into multiple partitions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">subset</span></code></p></td>
+<td><p>Subset of dataset based on position :param indexes: iterable which contains row indexes</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporarily_ignore</span></code></p></td>
+<td><p>Temporarily add the fields provided to <code class="docutils literal notranslate"><span class="pre">ignore_fields</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_dataset</span></code></p></td>
+<td><p>Error checking and type validation.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.datasets.GermanDataset.html" class="btn btn-neutral float-left" title="aif360.datasets.GermanDataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../explainers.html" class="btn btn-neutral float-right" title="Explainers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

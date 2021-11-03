@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.sklearn.metrics.consistency_score &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="aif360.sklearn.preprocessing.Reweighing" href="aif360.sklearn.preprocessing.Reweighing.html" />
+    <link rel="prev" title="aif360.sklearn.metrics.coefficient_of_variation" href="aif360.sklearn.metrics.coefficient_of_variation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.datasets</span></code>: Dataset loading functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>: Fairness metrics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#meta-metrics">Meta-metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#scorers">Scorers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#generic-metrics">Generic metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sklearn.html#group-fairness-metrics">Group fairness metrics</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../sklearn.html#individual-fairness-metrics">Individual fairness metrics</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.generalized_entropy_index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.generalized_entropy_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.generalized_entropy_error.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.generalized_entropy_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.theil_index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.theil_index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.sklearn.metrics.coefficient_of_variation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.coefficient_of_variation</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.consistency_score</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.preprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.preprocessing</span></code>: Pre-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.inprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.inprocessing</span></code>: In-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.postprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.postprocessing</span></code>: Post-processing algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.utils</span></code>: Utility functions</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code>.consistency_score</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.sklearn.metrics.consistency_score.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-sklearn-metrics-consistency-score">
+<h1><a class="reference internal" href="../sklearn.html#module-aif360.sklearn.metrics" title="aif360.sklearn.metrics"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.sklearn.metrics</span></code></a>.consistency_score<a class="headerlink" href="#aif360-sklearn-metrics-consistency-score" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="aif360.sklearn.metrics.consistency_score">
+<span class="sig-prename descclassname"><span class="pre">aif360.sklearn.metrics.</span></span><span class="sig-name descname"><span class="pre">consistency_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/sklearn/metrics/metrics.py#L550-L579"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.sklearn.metrics.consistency_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the consistency score.</p>
+<p>Individual fairness metric from <a class="footnote-reference brackets" href="#zemel13" id="id1">1</a> that measures how similar the
+labels are for similar instances.</p>
+<div class="math notranslate nohighlight">
+\[1 - \frac{1}{n}\sum_{i=1}^n |\hat{y}_i -
+\frac{1}{\text{n_neighbors}} \sum_{j\in\mathcal{N}_{\text{n_neighbors}}(x_i)} \hat{y}_j|\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em>) – Sample features.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em>) – Sample targets.</p></li>
+<li><p><strong>n_neighbors</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a><em>, </em><em>optional</em>) – Number of neighbors for the knn
+computation.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="zemel13"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="http://proceedings.mlr.press/v28/zemel13.html">R. Zemel, Y. Wu, K. Swersky, T. Pitassi, and C. Dwork,
+“Learning Fair Representations,” International Conference on Machine
+Learning, 2013.</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.sklearn.metrics.coefficient_of_variation.html" class="btn btn-neutral float-left" title="aif360.sklearn.metrics.coefficient_of_variation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aif360.sklearn.preprocessing.Reweighing.html" class="btn btn-neutral float-right" title="aif360.sklearn.preprocessing.Reweighing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

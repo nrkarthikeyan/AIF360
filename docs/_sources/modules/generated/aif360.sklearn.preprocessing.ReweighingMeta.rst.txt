@@ -1,0 +1,42 @@
+﻿:mod:`aif360.sklearn.preprocessing`.ReweighingMeta
+=========================================================
+
+.. currentmodule:: aif360.sklearn.preprocessing
+
+.. autoclass:: ReweighingMeta
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~ReweighingMeta.fit
+      
+      
+        ~ReweighingMeta.get_params
+      
+      
+        ~ReweighingMeta.predict
+      
+      
+        ~ReweighingMeta.predict_log_proba
+      
+      
+        ~ReweighingMeta.predict_proba
+      
+      
+        ~ReweighingMeta.score
+      
+      
+        ~ReweighingMeta.set_params
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.CompasDataset
+===========================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: CompasDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~CompasDataset.align_datasets
+      
+      
+        ~CompasDataset.convert_to_dataframe
+      
+      
+        ~CompasDataset.copy
+      
+      
+        ~CompasDataset.export_dataset
+      
+      
+        ~CompasDataset.import_dataset
+      
+      
+        ~CompasDataset.split
+      
+      
+        ~CompasDataset.subset
+      
+      
+        ~CompasDataset.temporarily_ignore
+      
+      
+        ~CompasDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

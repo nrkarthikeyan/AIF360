@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.datasets`.check_already_dropped
+=================================================================
+
+.. currentmodule:: aif360.sklearn.datasets
+
+.. autofunction:: check_already_dropped

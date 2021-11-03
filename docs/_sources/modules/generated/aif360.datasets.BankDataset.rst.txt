@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.BankDataset
+=========================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: BankDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~BankDataset.align_datasets
+      
+      
+        ~BankDataset.convert_to_dataframe
+      
+      
+        ~BankDataset.copy
+      
+      
+        ~BankDataset.export_dataset
+      
+      
+        ~BankDataset.import_dataset
+      
+      
+        ~BankDataset.split
+      
+      
+        ~BankDataset.subset
+      
+      
+        ~BankDataset.temporarily_ignore
+      
+      
+        ~BankDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

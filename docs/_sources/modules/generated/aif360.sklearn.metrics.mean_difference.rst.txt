@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.metrics`.mean_difference
+==========================================================
+
+.. currentmodule:: aif360.sklearn.metrics
+
+.. autofunction:: mean_difference

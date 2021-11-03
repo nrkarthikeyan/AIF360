@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.BinaryLabelDataset
+================================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: BinaryLabelDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~BinaryLabelDataset.align_datasets
+      
+      
+        ~BinaryLabelDataset.convert_to_dataframe
+      
+      
+        ~BinaryLabelDataset.copy
+      
+      
+        ~BinaryLabelDataset.export_dataset
+      
+      
+        ~BinaryLabelDataset.import_dataset
+      
+      
+        ~BinaryLabelDataset.split
+      
+      
+        ~BinaryLabelDataset.subset
+      
+      
+        ~BinaryLabelDataset.temporarily_ignore
+      
+      
+        ~BinaryLabelDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

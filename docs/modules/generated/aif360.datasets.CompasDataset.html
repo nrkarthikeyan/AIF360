@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.datasets.CompasDataset &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="aif360.datasets.GermanDataset" href="aif360.datasets.GermanDataset.html" />
+    <link rel="prev" title="aif360.datasets.BankDataset" href="aif360.datasets.BankDataset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../datasets.html#module-aif360.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../datasets.html#base-classes">Base classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../datasets.html#common-datasets">Common datasets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.AdultDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.AdultDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.BankDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.BankDataset</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.CompasDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.GermanDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.GermanDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.LawSchoolGPADataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.LawSchoolGPADataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.CompasDataset</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.datasets.CompasDataset.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-datasets-compasdataset">
+<h1><a class="reference internal" href="../datasets.html#module-aif360.datasets" title="aif360.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code></a>.CompasDataset<a class="headerlink" href="#aif360-datasets-compasdataset" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="aif360.datasets.CompasDataset">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">aif360.datasets.</span></span><span class="sig-name descname"><span class="pre">CompasDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">label_name='two_year_recid',</span> <span class="pre">favorable_classes=[0],</span> <span class="pre">protected_attribute_names=['sex',</span> <span class="pre">'race'],</span> <span class="pre">privileged_classes=[['Female'],</span> <span class="pre">['Caucasian']],</span> <span class="pre">instance_weights_name=None,</span> <span class="pre">categorical_features=['age_cat',</span> <span class="pre">'c_charge_degree',</span> <span class="pre">'c_charge_desc'],</span> <span class="pre">features_to_keep=['sex',</span> <span class="pre">'age',</span> <span class="pre">'age_cat',</span> <span class="pre">'race',</span> <span class="pre">'juv_fel_count',</span> <span class="pre">'juv_misd_count',</span> <span class="pre">'juv_other_count',</span> <span class="pre">'priors_count',</span> <span class="pre">'c_charge_degree',</span> <span class="pre">'c_charge_desc',</span> <span class="pre">'two_year_recid'],</span> <span class="pre">features_to_drop=[],</span> <span class="pre">na_values=[],</span> <span class="pre">custom_preprocessing=&lt;function</span> <span class="pre">default_preprocessing&gt;,</span> <span class="pre">metadata={'label_maps':</span> <span class="pre">[{1.0:</span> <span class="pre">'Did</span> <span class="pre">recid.',</span> <span class="pre">0.0:</span> <span class="pre">'No</span> <span class="pre">recid.'}],</span> <span class="pre">'protected_attribute_maps':</span> <span class="pre">[{0.0:</span> <span class="pre">'Male',</span> <span class="pre">1.0:</span> <span class="pre">'Female'},</span> <span class="pre">{1.0:</span> <span class="pre">'Caucasian',</span> <span class="pre">0.0:</span> <span class="pre">'Not</span> <span class="pre">Caucasian'}]}</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/datasets/compas_dataset.py#L24-L87"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.datasets.CompasDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>ProPublica COMPAS Dataset.</p>
+<p>See <code class="file docutils literal notranslate"><span class="pre">aif360/data/raw/compas/README.md</span></code>.</p>
+<p>See <a class="reference internal" href="aif360.datasets.StandardDataset.html#aif360.datasets.StandardDataset" title="aif360.datasets.StandardDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StandardDataset</span></code></a> for a description of the arguments.</p>
+<p>Note: The label value 0 in this case is considered favorable (no
+recidivism).</p>
+<p class="rubric">Examples</p>
+<p>In some cases, it may be useful to keep track of a mapping from
+<code class="docutils literal notranslate"><span class="pre">float</span> <span class="pre">-&gt;</span> <span class="pre">str</span></code> for protected attributes and/or labels. If our use
+case differs from the default, we can modify the mapping stored in
+<code class="docutils literal notranslate"><span class="pre">metadata</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">label_map</span> <span class="o">=</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">:</span> <span class="s1">&#39;Did recid.&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">:</span> <span class="s1">&#39;No recid.&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">protected_attribute_maps</span> <span class="o">=</span> <span class="p">[{</span><span class="mf">1.0</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">:</span> <span class="s1">&#39;Female&#39;</span><span class="p">}]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="o">=</span> <span class="n">CompasDataset</span><span class="p">(</span><span class="n">protected_attribute_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">],</span>
+<span class="gp">... </span><span class="n">privileged_classes</span><span class="o">=</span><span class="p">[[</span><span class="s1">&#39;Male&#39;</span><span class="p">]],</span> <span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label_map&#39;</span><span class="p">:</span> <span class="n">label_map</span><span class="p">,</span>
+<span class="gp">... </span><span class="s1">&#39;protected_attribute_maps&#39;</span><span class="p">:</span> <span class="n">protected_attribute_maps</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Now this information will stay attached to the dataset and can be
+used for more descriptive visualizations.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_datasets</span></code></p></td>
+<td><p>Align the other dataset features, labels and protected_attributes to this dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_to_dataframe</span></code></p></td>
+<td><p>Convert the StructuredDataset to a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></p></td>
+<td><p>Convenience method to return a copy of this dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_dataset</span></code></p></td>
+<td><p>Export the dataset and supporting attributes TODO: The preferred file format is HDF</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_dataset</span></code></p></td>
+<td><p>Import the dataset and supporting attributes TODO: The preferred file format is HDF</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split</span></code></p></td>
+<td><p>Split this dataset into multiple partitions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">subset</span></code></p></td>
+<td><p>Subset of dataset based on position :param indexes: iterable which contains row indexes</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporarily_ignore</span></code></p></td>
+<td><p>Temporarily add the fields provided to <code class="docutils literal notranslate"><span class="pre">ignore_fields</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_dataset</span></code></p></td>
+<td><p>Error checking and type validation.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.datasets.BankDataset.html" class="btn btn-neutral float-left" title="aif360.datasets.BankDataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aif360.datasets.GermanDataset.html" class="btn btn-neutral float-right" title="aif360.datasets.GermanDataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

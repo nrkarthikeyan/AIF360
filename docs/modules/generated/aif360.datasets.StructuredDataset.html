@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aif360.datasets.StructuredDataset &mdash; aif360 0.4.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="aif360.datasets.BinaryLabelDataset" href="aif360.datasets.BinaryLabelDataset.html" />
+    <link rel="prev" title="aif360.datasets.Dataset" href="aif360.datasets.Dataset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> aif360
+          </a>
+              <div class="version">
+                0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../datasets.html#module-aif360.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../datasets.html#base-classes">Base classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.Dataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.Dataset</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.StructuredDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.BinaryLabelDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.BinaryLabelDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.StandardDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.StandardDataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aif360.datasets.RegressionDataset.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.RegressionDataset</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../datasets.html#common-datasets">Common datasets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../explainers.html">Explainers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics.html">Fairness Metrics</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sklearn.html"><code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>-Compatible API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">aif360</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code>.StructuredDataset</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/modules/generated/aif360.datasets.StructuredDataset.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aif360-datasets-structureddataset">
+<h1><a class="reference internal" href="../datasets.html#module-aif360.datasets" title="aif360.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">aif360.datasets</span></code></a>.StructuredDataset<a class="headerlink" href="#aif360-datasets-structureddataset" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="aif360.datasets.StructuredDataset">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">aif360.datasets.</span></span><span class="sig-name descname"><span class="pre">StructuredDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protected_attribute_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_weights_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unprivileged_protected_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">privileged_protected_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/Trusted-AI/AIF360/blob/master/aif360/datasets/structured_dataset.py#L12-L573"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aif360.datasets.StructuredDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for all structured datasets.</p>
+<p>A StructuredDataset requires data to be stored in <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>
+objects with <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dtype</span></code></a> as <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float64</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a>) – Dataset features for each instance.</p></li>
+<li><p><strong>labels</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a>) – Generic label corresponding to each instance
+(could be ground-truth, predicted, cluster assignments, etc.).</p></li>
+<li><p><strong>scores</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a>) – Probability score associated with each label.
+Same shape as <code class="docutils literal notranslate"><span class="pre">labels</span></code>. Only valid for binary labels (this includes
+one-hot categorical labels as well).</p></li>
+<li><p><strong>protected_attributes</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a>) – A subset of <code class="docutils literal notranslate"><span class="pre">features</span></code> for which
+fairness is desired.</p></li>
+<li><p><strong>feature_names</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>)</em>) – Names describing each dataset feature.</p></li>
+<li><p><strong>label_names</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>)</em>) – Names describing each label.</p></li>
+<li><p><strong>protected_attribute_names</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>)</em>) – A subset of <code class="docutils literal notranslate"><span class="pre">feature_names</span></code>
+corresponding to <code class="docutils literal notranslate"><span class="pre">protected_attributes</span></code>.</p></li>
+<li><p><strong>privileged_protected_attributes</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a><em>)</em>) – A subset of
+protected attribute values which are considered privileged from a
+fairness perspective.</p></li>
+<li><p><strong>unprivileged_protected_attributes</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a><em>)</em>) – The remaining
+possible protected attribute values which are not included in
+<code class="docutils literal notranslate"><span class="pre">privileged_protected_attributes</span></code>.</p></li>
+<li><p><strong>instance_names</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>(</em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>)</em>) – Indentifiers for each instance. Sequential
+integers by default.</p></li>
+<li><p><strong>instance_weights</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><em>numpy.ndarray</em></a>) – Weighting for each instance. All
+equal (ones) by default. Pursuant to standard practice in social
+science data, 1 means one person or entity. These weights are hence
+person or entity multipliers (see:
+<a class="reference external" href="https://www.ibm.com/support/knowledgecenter/en/SS3RA7_15.0.0/com.ibm.spss.modeler.help/netezza_decisiontrees_weights.htm">https://www.ibm.com/support/knowledgecenter/en/SS3RA7_15.0.0/com.ibm.spss.modeler.help/netezza_decisiontrees_weights.htm</a>)
+These weights <em>may not</em> be normalized to sum to 1 across the entire
+dataset, rather the nominal (default) weight of each entity/record
+in the data is 1. This is similar in spirit to the person weight in
+census microdata samples.
+<a class="reference external" href="https://www.census.gov/programs-surveys/acs/technical-documentation/pums/about.html">https://www.census.gov/programs-surveys/acs/technical-documentation/pums/about.html</a></p></li>
+<li><p><strong>ignore_fields</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#set" title="(in Python v3.7)"><em>set</em></a><em>(</em><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>)</em>) – Attribute names to ignore when doing equality
+comparisons. Always at least contains <code class="docutils literal notranslate"><span class="pre">'metadata'</span></code>.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a>) – <p>Details about the creation of this dataset. For
+example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;transformer&#39;</span><span class="p">:</span> <span class="s1">&#39;Dataset.__init__&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="n">kwargs</span><span class="p">,</span>
+    <span class="s1">&#39;previous&#39;</span><span class="p">:</span> <span class="kc">None</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>df</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.4)"><em>pandas.DataFrame</em></a>) – Input DataFrame with features, labels, and
+protected attributes. Values should be preprocessed
+to remove NAs and make all data numerical. Index values are
+taken as instance names.</p></li>
+<li><p><strong>label_names</strong> (<em>iterable</em>) – Names of the label columns in <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p></li>
+<li><p><strong>protected_attribute_names</strong> (<em>iterable</em>) – List of names corresponding to
+protected attribute columns in <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p></li>
+<li><p><strong>instance_weights_name</strong> (<em>optional</em>) – Column name in <code class="docutils literal notranslate"><span class="pre">df</span></code> corresponding
+to instance weights. If not provided, <code class="docutils literal notranslate"><span class="pre">instance_weights</span></code> will be
+all set to 1.</p></li>
+<li><p><strong>unprivileged_protected_attributes</strong> (<em>optional</em>) – If not provided, all
+but the highest numerical value of each protected attribute will
+be considered not privileged.</p></li>
+<li><p><strong>privileged_protected_attributes</strong> (<em>optional</em>) – If not provided, the
+highest numerical value of each protected attribute will be
+considered privileged.</p></li>
+<li><p><strong>metadata</strong> (<em>optional</em>) – Additional metadata to append.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(in Python v3.7)"><strong>TypeError</strong></a> – Certain fields must be np.ndarrays as specified in the
+    class description.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – ndarray shapes must match.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_datasets</span></code></p></td>
+<td><p>Align the other dataset features, labels and protected_attributes to this dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_to_dataframe</span></code></p></td>
+<td><p>Convert the StructuredDataset to a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.3.4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></p></td>
+<td><p>Convenience method to return a copy of this dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_dataset</span></code></p></td>
+<td><p>Export the dataset and supporting attributes TODO: The preferred file format is HDF</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_dataset</span></code></p></td>
+<td><p>Import the dataset and supporting attributes TODO: The preferred file format is HDF</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split</span></code></p></td>
+<td><p>Split this dataset into multiple partitions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">subset</span></code></p></td>
+<td><p>Subset of dataset based on position :param indexes: iterable which contains row indexes</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporarily_ignore</span></code></p></td>
+<td><p>Temporarily add the fields provided to <code class="docutils literal notranslate"><span class="pre">ignore_fields</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_dataset</span></code></p></td>
+<td><p>Error checking and type validation.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aif360.datasets.Dataset.html" class="btn btn-neutral float-left" title="aif360.datasets.Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aif360.datasets.BinaryLabelDataset.html" class="btn btn-neutral float-right" title="aif360.datasets.BinaryLabelDataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018 - 2021, The AI Fairness 360 (AIF360) Authors..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

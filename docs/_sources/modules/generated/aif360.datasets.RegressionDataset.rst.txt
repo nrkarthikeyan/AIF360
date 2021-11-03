@@ -1,0 +1,48 @@
+﻿:mod:`aif360.datasets`.RegressionDataset
+===============================================
+
+.. currentmodule:: aif360.datasets
+
+.. autoclass:: RegressionDataset
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~RegressionDataset.align_datasets
+      
+      
+        ~RegressionDataset.convert_to_dataframe
+      
+      
+        ~RegressionDataset.copy
+      
+      
+        ~RegressionDataset.export_dataset
+      
+      
+        ~RegressionDataset.import_dataset
+      
+      
+        ~RegressionDataset.split
+      
+      
+        ~RegressionDataset.subset
+      
+      
+        ~RegressionDataset.temporarily_ignore
+      
+      
+        ~RegressionDataset.validate_dataset
+      
+   
+   
+
+   
+   
+   

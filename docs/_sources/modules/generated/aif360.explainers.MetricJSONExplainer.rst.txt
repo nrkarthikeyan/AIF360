@@ -1,0 +1,177 @@
+﻿:mod:`aif360.explainers`.MetricJSONExplainer
+===================================================
+
+.. currentmodule:: aif360.explainers
+
+.. autoclass:: MetricJSONExplainer
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~MetricJSONExplainer.accuracy
+      
+      
+        ~MetricJSONExplainer.average_abs_odds_difference
+      
+      
+        ~MetricJSONExplainer.average_odds_difference
+      
+      
+        ~MetricJSONExplainer.between_all_groups_coefficient_of_variation
+      
+      
+        ~MetricJSONExplainer.between_all_groups_generalized_entropy_index
+      
+      
+        ~MetricJSONExplainer.between_all_groups_theil_index
+      
+      
+        ~MetricJSONExplainer.between_group_coefficient_of_variation
+      
+      
+        ~MetricJSONExplainer.between_group_generalized_entropy_index
+      
+      
+        ~MetricJSONExplainer.between_group_theil_index
+      
+      
+        ~MetricJSONExplainer.coefficient_of_variation
+      
+      
+        ~MetricJSONExplainer.consistency
+      
+      
+        ~MetricJSONExplainer.disparate_impact
+      
+      
+        ~MetricJSONExplainer.equal_opportunity_difference
+      
+      
+        ~MetricJSONExplainer.error_rate
+      
+      
+        ~MetricJSONExplainer.error_rate_difference
+      
+      
+        ~MetricJSONExplainer.error_rate_ratio
+      
+      
+        ~MetricJSONExplainer.false_discovery_rate
+      
+      
+        ~MetricJSONExplainer.false_discovery_rate_difference
+      
+      
+        ~MetricJSONExplainer.false_discovery_rate_ratio
+      
+      
+        ~MetricJSONExplainer.false_negative_rate
+      
+      
+        ~MetricJSONExplainer.false_negative_rate_difference
+      
+      
+        ~MetricJSONExplainer.false_negative_rate_ratio
+      
+      
+        ~MetricJSONExplainer.false_omission_rate
+      
+      
+        ~MetricJSONExplainer.false_omission_rate_difference
+      
+      
+        ~MetricJSONExplainer.false_omission_rate_ratio
+      
+      
+        ~MetricJSONExplainer.false_positive_rate
+      
+      
+        ~MetricJSONExplainer.false_positive_rate_difference
+      
+      
+        ~MetricJSONExplainer.false_positive_rate_ratio
+      
+      
+        ~MetricJSONExplainer.falses_omission_rate_difference
+      
+      
+        ~MetricJSONExplainer.generalized_entropy_index
+      
+      
+        ~MetricJSONExplainer.mean_difference
+      
+      
+        ~MetricJSONExplainer.negative_predictive_value
+      
+      
+        ~MetricJSONExplainer.num_false_negatives
+      
+      
+        ~MetricJSONExplainer.num_false_positives
+      
+      
+        ~MetricJSONExplainer.num_instances
+      
+      
+        ~MetricJSONExplainer.num_negatives
+      
+      
+        ~MetricJSONExplainer.num_positives
+      
+      
+        ~MetricJSONExplainer.num_pred_negatives
+      
+      
+        ~MetricJSONExplainer.num_pred_positives
+      
+      
+        ~MetricJSONExplainer.num_true_negatives
+      
+      
+        ~MetricJSONExplainer.num_true_positives
+      
+      
+        ~MetricJSONExplainer.positive_predictive_value
+      
+      
+        ~MetricJSONExplainer.power
+      
+      
+        ~MetricJSONExplainer.precision
+      
+      
+        ~MetricJSONExplainer.recall
+      
+      
+        ~MetricJSONExplainer.sensitivity
+      
+      
+        ~MetricJSONExplainer.specificity
+      
+      
+        ~MetricJSONExplainer.statistical_parity_difference
+      
+      
+        ~MetricJSONExplainer.theil_index
+      
+      
+        ~MetricJSONExplainer.true_negative_rate
+      
+      
+        ~MetricJSONExplainer.true_positive_rate
+      
+      
+        ~MetricJSONExplainer.true_positive_rate_difference
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,6 @@
+﻿:mod:`aif360.sklearn.utils`.check_inputs
+=====================================================
+
+.. currentmodule:: aif360.sklearn.utils
+
+.. autofunction:: check_inputs

@@ -1,0 +1,48 @@
+﻿:mod:`aif360.algorithms.inprocessing`.GerryFairClassifier
+================================================================
+
+.. currentmodule:: aif360.algorithms.inprocessing
+
+.. autoclass:: GerryFairClassifier
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+        ~GerryFairClassifier.fit
+      
+      
+        ~GerryFairClassifier.fit_predict
+      
+      
+        ~GerryFairClassifier.fit_transform
+      
+      
+        ~GerryFairClassifier.generate_heatmap
+      
+      
+        ~GerryFairClassifier.pareto
+      
+      
+        ~GerryFairClassifier.predict
+      
+      
+        ~GerryFairClassifier.print_outputs
+      
+      
+        ~GerryFairClassifier.save_heatmap
+      
+      
+        ~GerryFairClassifier.transform
+      
+   
+   
+
+   
+   
+   

@@ -1,0 +1,14 @@
+﻿:mod:`aif360.sklearn.datasets`.ColumnAlreadyDroppedWarning
+=================================================================
+
+.. currentmodule:: aif360.sklearn.datasets
+
+.. autoclass:: ColumnAlreadyDroppedWarning
+
+   
+   
+   
+
+   
+   
+   
