@@ -18,7 +18,7 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../..'))
+#sys.path.insert(0, os.path.abspath('../..'))
 
 import aif360
 import fairlearn
@@ -84,6 +84,7 @@ author = u'aif360 developers'
 #
 # The full version, including alpha/beta/rc tags.
 release = aif360.__version__
+
 # The short X.Y version.
 version = '.'.join(release.split('.')[:2])
 
@@ -140,7 +141,8 @@ if os.environ.get('READTHEDOCS') != 'True':
 html_static_path = ['static']
 
 def setup(app):
-    app.add_stylesheet('style.css')
+    #app.add_stylesheet('style.css')
+    app.add_css_file('style.css')
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
